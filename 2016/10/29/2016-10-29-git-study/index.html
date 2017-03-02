@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="今天对 git 进行了学习,整理总结记录一下,用来查漏补缺.">
+<meta name="description" content="昨天在 GitHub Pages 上搭建了自己的 blog, 今天对 git 进行了学习,整理总结记录一下,用来查漏补缺.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git入门">
 <meta property="og:url" content="http://yoursite.com/2016/10/29/2016-10-29-git-study/index.html">
 <meta property="og:site_name" content="Xiaoshier Blog">
-<meta property="og:description" content="今天对 git 进行了学习,整理总结记录一下,用来查漏补缺.">
+<meta property="og:description" content="昨天在 GitHub Pages 上搭建了自己的 blog, 今天对 git 进行了学习,整理总结记录一下,用来查漏补缺.">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-29/1.png">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-29/2.png">
-<meta property="og:updated_time" content="2017-02-21T05:31:16.000Z">
+<meta property="og:updated_time" content="2017-03-02T04:25:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git入门">
-<meta name="twitter:description" content="今天对 git 进行了学习,整理总结记录一下,用来查漏补缺.">
+<meta name="twitter:description" content="昨天在 GitHub Pages 上搭建了自己的 blog, 今天对 git 进行了学习,整理总结记录一下,用来查漏补缺.">
 <meta name="twitter:image" content="http://yoursite.com/images/2016-10-29/1.png">
 
 
@@ -347,10 +347,6 @@
           
 
           
-              <div class="post-description">
-                  今天对 git 进行了学习,整理总结记录一下,用来查漏补缺.
-              </div>
-          
 
         </div>
       </header>
@@ -364,6 +360,7 @@
 
       
         <p>昨天在 GitHub Pages 上搭建了自己的 blog, 今天对 git 进行了学习,整理总结记录一下,用来查漏补缺.</p>
+<a id="more"></a>
 <p>设备: MacBook Pro</p>
 <p>版本: OS X EI Capitan 10.11.5<br><br /></p>
 <hr>
@@ -375,17 +372,14 @@
 <li><p>设置SSH Key</p>
 <p>github 上连接已有仓库时的认证,通过使用 SSH 的公开密匙方式认证进行的.也就是说,本地电脑的 git 与远程 github 上的仓库连接是通过 SSH Key 一致时,遍知道你是该用户,我可以上传,下载等(目前的理解如此,不知后面会不会推翻现在的认知)</p>
 <p>打开终端,输入:</p>
-<pre><code>$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;
-</code></pre><p>输出显示:</p>
-<pre><code>Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/xiaoshier/.ssh/id_rsa):
-</code></pre><p>按回车,不要修改默认路径.</p>
-<pre><code>Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-</code></pre><p>输入密码,并确认,成功:</p>
-<pre><code>Your identification has been saved in /Users/your_user_directory/.ssh/id_rsa.
-Your public key has been saved in /Users/your_user_directory/.ssh/id_rsa.pub. The key fingerprint is: ... ...
-</code></pre><p>找到.ssh 文件夹,编辑器打开<code>id_rsa.pub</code>文件,复制内容到剪贴板</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"your_email@youremail.com"</span></div></pre></td></tr></table></figure>
+<p>输出显示:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/Users/xiaoshier/.ssh/id_rsa):</div></pre></td></tr></table></figure>
+<p>按回车,不要修改默认路径.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</div><div class="line">Enter same passphrase again:</div></pre></td></tr></table></figure>
+<p>输入密码,并确认,成功:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Your identification has been saved <span class="keyword">in</span> /Users/your_user_directory/.ssh/id_rsa.</div><div class="line">Your public key has been saved <span class="keyword">in</span> /Users/your_user_directory/.ssh/id_rsa.pub. The key fingerprint is: ... ...</div></pre></td></tr></table></figure>
+<p>找到.ssh 文件夹,编辑器打开<code>id_rsa.pub</code>文件,复制内容到剪贴板</p>
 </li>
 <li><p>打开 <a href="https://github.com/settings/keys">github</a> 设置ssh,</p>
 <p><img src="/images/2016-10-29/1.png" alt="img1"><br><img src="/images/2016-10-29/2.png" alt="img2"></p>
@@ -394,65 +388,49 @@ Your public key has been saved in /Users/your_user_directory/.ssh/id_rsa.pub. Th
 </ul>
 <h3 id="2-本地创建-git-项目"><a href="#2-本地创建-git-项目" class="headerlink" title="2.本地创建 git 项目"></a>2.本地创建 git 项目</h3><ul>
 <li><p>本地创建 git 项目</p>
-<pre><code>$ mkdir git-tutorial
-$ cd git-tutorial
-$ git init
-</code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ mkdir git-tutorial</div><div class="line">$ <span class="built_in">cd</span> git-tutorial</div><div class="line">$ git init</div></pre></td></tr></table></figure>
+</li>
 <li><p>创建文件READEME.md</p>
 <p>添加至本地git仓库, 并保存到本地仓库的历史记录中</p>
-<pre><code>$ git add READEME.md
-$ git commit -m &quot;Initial commit&quot;
-</code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git add READEME.md</div><div class="line">$ git commit -m <span class="string">"Initial commit"</span></div></pre></td></tr></table></figure>
+</li>
 <li><p>分支操作</p>
 <p>从 <code>master</code> 分支创建<code>feature-A</code> 分支和 <code>feature-B</code>分支,并合并</p>
 <p>1.创建 feature-A 分支,并处于 feature-A 分支下</p>
-<pre><code>$ git checkout -b feature-A
-</code></pre><p>2.使用 <code>git branch</code> 查看分支一览表</p>
-<pre><code>$ git branch
-* feature-A   //*表示当前所处分支
-master
-</code></pre><p>3.在 feature-A 分支下修改READEME.md 文件,并保历史记录</p>
-<pre><code>$ git add READEME.md
-$ git commit -m &quot;add feature-A&quot;
-</code></pre><p>4.再切回<code>master</code>分支,查看README.md,没有发生变化</p>
-<pre><code>$ git checkbox master
-</code></pre><p>5.合并分支</p>
-<pre><code>$ git checkout master
-$ git merge --no-ff feature-A
-</code></pre><p>6.查看提交日志(git commit -m “日志内容”)</p>
-<pre><code>$ git log
-</code></pre><p>7.以图表的形式查看分支</p>
-<pre><code>$ git log -graph
-</code></pre><p>8.回溯至 feature-A 创建前版本,创建分支feature-B</p>
-<pre><code>$ git reset --hard 9104c361a2e6531fed0ca606a52ade5cbfc0d354
-
-创建分支 feature-B
-
-$ git checkout -b feature-B
-</code></pre><p>9.在 feature-B 分支下修改READEME.md 文件,并保历史记录</p>
-<pre><code>$ git add README.md
-$ git commit -m &quot;branch feature-B&quot;
-</code></pre><p>10.回复到 feature-A 分支合并后的状态</p>
-<pre><code>$ git reflog
-
-$ git reset --hard 9104c36
-$ git merge --no-ff feature-B
-</code></pre><p>解决冲突后执行,<code>git add</code> , <code>git commit</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b feature-A</div></pre></td></tr></table></figure>
+<p>2.使用 <code>git branch</code> 查看分支一览表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git branch</div><div class="line">* feature-A   //*表示当前所处分支</div><div class="line">master</div></pre></td></tr></table></figure>
+<p>3.在 feature-A 分支下修改READEME.md 文件,并保历史记录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git add READEME.md</div><div class="line">$ git commit -m <span class="string">"add feature-A"</span></div></pre></td></tr></table></figure>
+<p>4.再切回<code>master</code>分支,查看README.md,没有发生变化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkbox master</div></pre></td></tr></table></figure>
+<p>5.合并分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git checkout master</div><div class="line">$ git merge --no-ff feature-A</div></pre></td></tr></table></figure>
+<p>6.查看提交日志(git commit -m “日志内容”)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span></div></pre></td></tr></table></figure>
+<p>7.以图表的形式查看分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> -graph</div></pre></td></tr></table></figure>
+<p>8.回溯至 feature-A 创建前版本,创建分支feature-B</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reset --hard 9104c361a2e6531fed0ca606a52ade5cbfc0d354</div></pre></td></tr></table></figure>
+<pre><code>创建分支 feature-B
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b feature-B</div></pre></td></tr></table></figure>
+<p>9.在 feature-B 分支下修改READEME.md 文件,并保历史记录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git add README.md</div><div class="line">$ git commit -m <span class="string">"branch feature-B"</span></div></pre></td></tr></table></figure>
+<p>10.回复到 feature-A 分支合并后的状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git reflog</div><div class="line"></div><div class="line">$ git reset --hard 9104c36</div><div class="line">$ git merge --no-ff feature-B</div></pre></td></tr></table></figure>
+<p>解决冲突后执行,<code>git add</code> , <code>git commit</code></p>
 </li>
 </ul>
 <h3 id="3-推送至远程仓库github"><a href="#3-推送至远程仓库github" class="headerlink" title="3.推送至远程仓库github"></a>3.推送至远程仓库github</h3><ul>
 <li><p>在 <a href="https://github.com/new">gitbub</a>中创建一个 repository<code>git-tutorial</code>,获取HTTPS或 SSH 的值</p>
 </li>
 <li><p>在终端输入:</p>
-<pre><code>$ git remote add origin https://github.com/username/git-tutorial.git
-$ git push -u origin master
-</code></pre><p>此时在 github 上就可以看见我们的项目了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git remote add origin https://github.com/username/git-tutorial.git</div><div class="line">$ git push -u origin master</div></pre></td></tr></table></figure>
+<p>此时在 github 上就可以看见我们的项目了</p>
 </li>
 </ul>
-<h3 id="4-删除-git-仓库中的文件"><a href="#4-删除-git-仓库中的文件" class="headerlink" title="4. 删除 git 仓库中的文件"></a>4. 删除 git 仓库中的文件</h3><pre><code>$ git rm --cached [filename] || git rm -r --cached [directory]
-$ git commit -m &apos;remove useless files&apos;
-$ git push -u origin
-</code></pre>
+<h3 id="4-删除-git-仓库中的文件"><a href="#4-删除-git-仓库中的文件" class="headerlink" title="4. 删除 git 仓库中的文件"></a>4. 删除 git 仓库中的文件</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git rm --cached [filename] || git rm -r --cached [directory]</div><div class="line">$ git commit -m <span class="string">'remove useless files'</span></div><div class="line">$ git push -u origin</div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -572,7 +550,7 @@ $ git push -u origin
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

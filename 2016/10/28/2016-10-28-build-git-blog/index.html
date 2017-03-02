@@ -87,21 +87,21 @@
 
 
 
-<meta name="description" content="blog">
+<meta name="description" content="对一个只是在 git 上查找资源的人, 今天晚上折腾了一下,按照网上查的资料在 github 上建了个人博客,期间遇见不少问题,记录下来,期望能帮助到你.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用git搭建博客(mac版)">
+<meta property="og:title" content="用 git 和 Jekyll 搭建博客(mac 版)">
 <meta property="og:url" content="http://yoursite.com/2016/10/28/2016-10-28-build-git-blog/index.html">
 <meta property="og:site_name" content="Xiaoshier Blog">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="对一个只是在 git 上查找资源的人, 今天晚上折腾了一下,按照网上查的资料在 github 上建了个人博客,期间遇见不少问题,记录下来,期望能帮助到你.">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/1.png">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/2.png">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/3.png">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/4.png">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/5.png">
-<meta property="og:updated_time" content="2017-02-21T05:53:12.000Z">
+<meta property="og:updated_time" content="2017-03-02T04:21:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用git搭建博客(mac版)">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="用 git 和 Jekyll 搭建博客(mac 版)">
+<meta name="twitter:description" content="对一个只是在 git 上查找资源的人, 今天晚上折腾了一下,按照网上查的资料在 github 上建了个人博客,期间遇见不少问题,记录下来,期望能帮助到你.">
 <meta name="twitter:image" content="http://yoursite.com/images/2016-10-28/1.png">
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <title> 用git搭建博客(mac版) | Xiaoshier Blog </title>
+  <title> 用 git 和 Jekyll 搭建博客(mac 版) | Xiaoshier Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +289,7 @@
             
             
               
-                用git搭建博客(mac版)
+                用 git 和 Jekyll 搭建博客(mac 版)
               
             
           </h1>
@@ -350,10 +350,6 @@
           
 
           
-              <div class="post-description">
-                  blog
-              </div>
-          
 
         </div>
       </header>
@@ -366,77 +362,60 @@
       
 
       
-        <p>对一个只是在 git 上查找资源的人,今天晚上折腾了一下,按照网上查的资料在 github 上建了个人博客,期间遇见不少问题,记录下来,期望能帮助到你.</p>
+        <p>对一个只是在 git 上查找资源的人, 今天晚上折腾了一下,按照网上查的资料在 github 上建了个人博客,期间遇见不少问题,记录下来,期望能帮助到你.</p>
+<a id="more"></a>
 <p>设备: MacBook Pro</p>
 <p>版本: OS X EI Capitan 10.11.5(此处写系统级别,是因为 mac 电脑在后面安装 jekyll处有些坑)</p>
-<h1 id="一、GitHub-Pages"><a href="#一、GitHub-Pages" class="headerlink" title="一、GitHub Pages"></a>一、GitHub Pages</h1><p><a href="https://pages.github.com/">GitHub Pages</a> 可以被认为是用户编写的、托管在github上的静态网页。</p>
-<p><a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">GitHub Pages</a> 需要创建 <code>master</code> 或 <code>gh-pages</code> 分支, 设置其中一个作为发布资源,本文在<code>master</code>分支下创建博客</p>
-<p><em>注: 也可以创建一个新的 repository,没有父节点的分支<code>gh-pages</code>,将文件放在该分支中 (因为github规定，只有该分支中 <code>gh-pages</code>的页面，才会生成网页文件,在username.github.io中例外)</em></p>
-<h1 id="二、Jekyll"><a href="#二、Jekyll" class="headerlink" title="二、Jekyll"></a>二、Jekyll</h1><p><a href="http://jekyllcn.com/">Jekyll</a> 是一个静态站点生成器，它会根据网页源码生成静态文件。它提供了模板、变量、插件等功能，所以实际上可以用来编写整个网站</p>
-<h1 id="三、创建"><a href="#三、创建" class="headerlink" title="三、创建"></a>三、创建</h1><h4 id="1-设置GitHub-Pages"><a href="#1-设置GitHub-Pages" class="headerlink" title="1.设置GitHub Pages"></a>1.设置<a href="https://pages.github.com/">GitHub Pages</a></h4><ul>
+<h2 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h2><p><a href="https://pages.github.com/">GitHub Pages</a> 可以被认为是用户编写的、托管在github上的静态网页。<br><a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">GitHub Pages</a> 需要创建 <code>master</code> 或 <code>gh-pages</code> 分支, 设置其中一个作为发布资源,本文在<code>master</code>分支下创建博客<br><em>注: 也可以创建一个新的 repository,没有父节点的分支<code>gh-pages</code>,将文件放在该分支中 (因为github规定，只有该分支中 <code>gh-pages</code>的页面，才会生成网页文件,在username.github.io中例外)</em></p>
+<h2 id="Jekyll"><a href="#Jekyll" class="headerlink" title="Jekyll"></a>Jekyll</h2><p><a href="http://jekyllcn.com/">Jekyll</a> 是一个静态站点生成器，它会根据网页源码生成静态文件。它提供了模板、变量、插件等功能，所以实际上可以用来编写整个网站</p>
+<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><h4 id="1-创建GitHub-Pages"><a href="#1-创建GitHub-Pages" class="headerlink" title="1. 创建GitHub Pages"></a>1. 创建<a href="https://pages.github.com/">GitHub Pages</a></h4><ul>
 <li><p>首先在 github 上创建新的repository,名字为 username.github.io;</p>
 <p><img src="/images/2016-10-28/1.png" alt="img1"><br><img src="/images/2016-10-28/2.png" alt="img2"></p>
 </li>
 </ul>
 <ul>
 <li><p>在本地创建一个文件夹,存储博客内容</p>
-<pre><code>$ mkdir blog_demo
-$ cd blog_demo
-$ git clone https://github.com/username/username.github.io
-$ cd username.github.io
-$ echo &quot;Hello World&quot; &gt; index.html
-</code></pre><p><em>此时在浏览器中输入 <code>https://username.github.io</code> ,你就可以看见 Hello,World这两个单词了</em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ mkdir blog_demo</div><div class="line">$ <span class="built_in">cd</span> blog_demo</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/username/username.github.io</div><div class="line">$ <span class="built_in">cd</span> username.github.io</div><div class="line">$ <span class="built_in">echo</span> <span class="string">"Hello World"</span> &gt; index.html</div></pre></td></tr></table></figure>
+<p><em>此时在浏览器中输入 <code>https://username.github.io</code> ,你就可以看见 Hello,World这两个单词了</em></p>
 </li>
 </ul>
-<h1 id="2-设置Jekyll"><a href="#2-设置Jekyll" class="headerlink" title="2.设置Jekyll"></a>2.设置<a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">Jekyll</a></h1><ul>
+<h4 id="2-安装Jekyll"><a href="#2-安装Jekyll" class="headerlink" title="2.安装Jekyll"></a>2.安装<a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">Jekyll</a></h4><ul>
 <li><p>需要 Ruby 2.0.0及以上版本版本,低于2.0.0的自行谷歌,此处给出更新链接<a href="https://segmentfault.com/a/1190000003784636">安装更高版本Ruby</a></p>
-<pre><code>$ruby --version
-</code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ruby --version</div></pre></td></tr></table></figure>
+</li>
 <li><p>安装 Bundler</p>
-<pre><code>$ gem install bundler
-</code></pre><p>若出现问题使用下面<a href="http://stackoverflow.com/questions/32891965/error-while-executing-gem-errnoeperm-operation-not-permitted">命令</a>:<br><img src="/images/2016-10-28/3.png" alt="img3"></p>
-<pre><code>$ sudo gem install -n /usr/local/bin bundler
-</code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem install bundler</div></pre></td></tr></table></figure>
+<p>若出现问题使用下面<a href="http://stackoverflow.com/questions/32891965/error-while-executing-gem-errnoeperm-operation-not-permitted">命令</a>:<br><img src="/images/2016-10-28/3.png" alt="img3"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo gem install -n /usr/<span class="built_in">local</span>/bin bundler</div></pre></td></tr></table></figure>
+</li>
 <li><p>使用 Bundler 安装 Jekyll</p>
 <p>还记得么,当前文件夹为 username.github.io, 使用编辑器在改文件夹得根目录下创建一个文件,文件名为<code>Gemfile</code>,内容为</p>
 <pre><code>source &apos;https://rubygems.org&apos;
 gem &apos;github-pages&apos;, group: :jekyll_plugins
 </code></pre></li>
 <li><p>安装 Jekyll以及他的依赖(安装时没有任何进度条之类的提示,半天没反应,我当时以为又是哪里出问题了,所以请耐心等待;若安装出现暂停,请按照提示进行,或输入密码,或从提示中复制另外的执行命令即可)<br><img src="/images/2016-10-28/4.png" alt="img4"></p>
-<pre><code>$ bundle install
-</code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bundle install</div></pre></td></tr></table></figure>
+</li>
 <li><p>生成 Jekyll 文件</p>
-<pre><code>$ bundle exec jekyll new . --force
-</code></pre><p>该命令执行后,会在 <code>username.github.io</code> 中生成 Jekyll所需的文件,在编辑器中打开 <code>Gemfile</code> 文件,删除下面内容</p>
-<pre><code>$ &quot;jekyll&quot;, &quot;3.2.1&quot;
-</code></pre><p>去掉下面内容的注释,即去除 <code>#</code> 号:</p>
-<pre><code>$ gem &quot;github-pages&quot;, group :jekyll_plugins
-</code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bundle <span class="built_in">exec</span> jekyll new . --force</div></pre></td></tr></table></figure>
+<p>该命令执行后,会在 <code>username.github.io</code> 中生成 Jekyll所需的文件,在编辑器中打开 <code>Gemfile</code> 文件,删除下面内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="string">"jekyll"</span>, <span class="string">"3.2.1"</span></div></pre></td></tr></table></figure>
+<p>去掉下面内容的注释,即去除 <code>#</code> 号:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem <span class="string">"github-pages"</span>, group :jekyll_plugins</div></pre></td></tr></table></figure>
+</li>
 <li><p>创建本地 Jekyll站点</p>
 <p>执行如下命令:</p>
-<pre><code>$ bundle exec jekyll serve
-</code></pre><p><img src="/images/2016-10-28/5.png" alt="img5"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bundle <span class="built_in">exec</span> jekyll serve</div></pre></td></tr></table></figure>
+<p><img src="/images/2016-10-28/5.png" alt="img5"></p>
 <p>此时会报错, 在_config.yml文件末尾添加<a href="https://github.com/jekyll/jekyll/issues/2938">下面语句</a>即可;</p>
-<pre><code>exclude: [vendor]
-</code></pre><p>再次执行上面命令,成功后在浏览器中打开 <code>http://127.0.0.1:4000/</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">exclude: [vendor]</div></pre></td></tr></table></figure>
+<p>再次执行上面命令,成功后在浏览器中打开 <code>http://127.0.0.1:4000/</code></p>
 <p>成功打开后,咦,样式怎么不正确呢,此时需要修改配置文件<code>_config.yml&#39;的参数,修改其中的</code>url`即可</p>
 </li>
-<li><p>现在上传至 github</p>
-<p>执行如下上传 github命令:</p>
-<pre><code>$ git add --all
-$ git commit -m &quot;Initial commit&quot;
-$ git push -u origin master
-</code></pre></li>
-<li><p>上传成功后, 在浏览器中打开<code>username.github.io</code>,你的 blog 已经建好了,可以修改内容了</p>
-</li>
 </ul>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="https://pages.github.com/">GitHub Pages</a> 官方说明</li>
-<li>安装 <a href="http://jekyllcn.com/">Jekyll</a> 在本地配置 Jekyll 环境，实现本地 Blog 配置改动和博文发布的预览。</li>
-<li><a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">Setting up your GitHub Pages site locally with Jekyll</a></li>
-<li>阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门</a></li>
-<li><a href="https://help.github.com/articles/user-organization-and-project-pages/">个人,组织,项目创建 github pages 的详解</a></li>
-</ul>
+<h4 id="3-上传至-github"><a href="#3-上传至-github" class="headerlink" title="3. 上传至 github"></a>3. 上传至 github</h4><p>执行如下上传 github命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git add --all</div><div class="line">$ git commit -m <span class="string">"Initial commit"</span></div><div class="line">$ git push -u origin master</div></pre></td></tr></table></figure></p>
+<h4 id="4-查看博客"><a href="#4-查看博客" class="headerlink" title="4. 查看博客"></a>4. 查看博客</h4><p>上传成功后, 在浏览器中打开<code>username.github.io</code>,你的 blog 已经建好了</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p> <a href="https://pages.github.com/">GitHub Pages</a> 官方说明<br> 安装 <a href="http://jekyllcn.com/">Jekyll</a> 在本地配置 Jekyll 环境，实现本地 Blog 配置改动和博文发布的预览。<br> <a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">Setting up your GitHub Pages site locally with Jekyll</a><br> 阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门</a><br> <a href="https://help.github.com/articles/user-organization-and-project-pages/">个人,组织,项目创建 github pages 的详解</a></p>
 
       
     </div>
@@ -547,7 +526,7 @@ $ git push -u origin master
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -600,7 +579,7 @@ $ git push -u origin master
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、GitHub-Pages"><span class="nav-number">1.</span> <span class="nav-text">一、GitHub Pages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、Jekyll"><span class="nav-number">2.</span> <span class="nav-text">二、Jekyll</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、创建"><span class="nav-number">3.</span> <span class="nav-text">三、创建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-设置GitHub-Pages"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">1.设置GitHub Pages</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-设置Jekyll"><span class="nav-number">4.</span> <span class="nav-text">2.设置Jekyll</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">4.0.1.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Pages"><span class="nav-number">1.</span> <span class="nav-text">GitHub Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jekyll"><span class="nav-number">2.</span> <span class="nav-text">Jekyll</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建博客"><span class="nav-number">3.</span> <span class="nav-text">搭建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-创建GitHub-Pages"><span class="nav-number">3.0.1.</span> <span class="nav-text">1. 创建GitHub Pages</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装Jekyll"><span class="nav-number">3.0.2.</span> <span class="nav-text">2.安装Jekyll</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-上传至-github"><span class="nav-number">3.0.3.</span> <span class="nav-text">3. 上传至 github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-查看博客"><span class="nav-number">3.0.4.</span> <span class="nav-text">4. 查看博客</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>

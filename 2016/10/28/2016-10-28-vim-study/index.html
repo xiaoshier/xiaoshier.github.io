@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/8.png">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/11.png">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/9.png">
-<meta property="og:updated_time" content="2017-02-21T05:27:23.000Z">
+<meta property="og:updated_time" content="2017-03-02T04:05:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim 常用操作">
 <meta name="twitter:description" content="vim学习之查漏补缺.">
@@ -351,10 +351,6 @@
           
 
           
-              <div class="post-description">
-                  vim学习之查漏补缺.
-              </div>
-          
 
         </div>
       </header>
@@ -368,15 +364,31 @@
 
       
         <p>vim学习之查漏补缺.</p>
-<p>Vim是从vi发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。<br>和Emacs并列成为类Unix系统用户最喜欢的编辑器。之前看到 vim 想到了黑客帝国里的情景,只见黑色的电脑屏幕上,<br>字母在飞快的变换着,当时就觉得好厉害啊,与我相隔十万八千里。以至于入行后,刚开始使用 terminal 就怕怕的,<br>看见用 vim 当做编辑器的程序员,敬仰之情油然而生,今天就带着种种心情,开始了 vim </p>
-<h1 id="一-vi-基本命令"><a href="#一-vi-基本命令" class="headerlink" title="一.vi 基本命令"></a>一.vi 基本命令</h1><p>还得说点题外话,既然是查漏补缺的文章,就记录一下第一次见到 vim 操作时的情景吧.<br>还记得,刚入行时,做移动端项目,需要在手机上测试,这需要手机连接电脑,这可怎么办呢,还好家里有前辈,于是叫来前辈帮忙,<br>说是可以通过 apache 建立服务,手机与电脑同一网络下,输入网址即可看见我做的页面了,哇,听着就好高深的样子(对于入行前<br>是电脑白痴,前端又是一通自学的人来说),这位前辈在网上搜了搜,第一件事是把 mac 自带的 terminal 打开,噼里啪啦弄了一通<br>,就好了(哇塞,这个敬仰之情).搞定之后,我也按照网上的教程,到了 vi 这一步时,怎么弄都没反应,只好把终端退出,这个就不了了之了.</p>
-<p><strong>1.用vi创建,编辑,保存文件</strong><br>打开终端创建</p>
-<pre><code>$ mkdir vim-study 
-$ cd vim-study 
+<a id="more"></a>
+<p>Vim是从vi发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。和Emacs并列成为类Unix系统用户最喜欢的编辑器。之前看到 vim 想到了黑客帝国里的情景,只见黑色的电脑屏幕上, 字母在飞快的变换着,当时就觉得好厉害啊,与我相隔十万八千里。以至于入行后,刚开始使用 terminal 就怕怕的,看见用 vim 当做编辑器的程序员,敬仰之情油然而生,今天就带着种种心情,开始了 vim </p>
+<p>还得说点题外话,既然是查漏补缺的文章,就记录一下第一次见到 vim 操作时的情景吧. 还记得,刚入行时,做移动端项目,需要在手机上测试,这需要手机连接电脑,这可怎么办呢,还好家里有前辈,于是叫来前辈帮忙, 说是可以通过 apache 建立服务,手机与电脑同一网络下,输入网址即可看见我做的页面了,哇,听着就好高深的样子(对于入行前 是电脑白痴,前端又是一通自学的人来说),这位前辈在网上搜了搜,第一件事是把 mac 自带的 terminal 打开,噼里啪啦弄了一通 ,就好了(哇塞,这个敬仰之情).搞定之后,我也按照网上的教程,到了 vi 这一步时,怎么弄都没反应,只好把终端退出,这个就不了了之了.</p>
+<h2 id="用vi创建-编辑-保存文件"><a href="#用vi创建-编辑-保存文件" class="headerlink" title="用vi创建,编辑,保存文件"></a>用vi创建,编辑,保存文件</h2><h3 id="1-创建文件"><a href="#1-创建文件" class="headerlink" title="1.创建文件"></a>1.创建文件</h3><ol>
+<li>使用终端创建<pre><code class="bash">$ mkdir vim-study 
+$ <span class="built_in">cd</span> vim-study 
 $ vi hello.md  //vi 指令,创建一个文件,并进入编辑模式
-</code></pre><p>出现如下图内容,此时处于<code>normal</code> 模式,需进入<code>Insert</code> 模式,方可进行编辑,输入<code>i</code>即可进入<code>Insert</code>模式</p>
+</code></pre>
+</li>
+<li>在 vim 编辑器中创建<ul>
+<li>光标在目标文件上, 键入 <code>m</code></li>
+<li><code>a</code> 添加文件夹或文件</li>
+<li><code>m</code> 移动到其他位置 </li>
+<li><code>d</code> 删除，此删除为永久删除，无法找回，请留意</li>
+<li><code>r</code> 在 Finder 中显示该文件</li>
+<li><code>o</code> 使用系统默认编辑器打开该文件</li>
+<li><code>q</code> 快速查看该文件</li>
+<li><code>c</code> 复制该文件至其他位置</li>
+<li><code>l</code> 显示该文件信息</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-编辑文件"><a href="#2-编辑文件" class="headerlink" title="2.编辑文件"></a>2.编辑文件</h3><p>出现如下图内容,此时处于<code>normal</code> 模式,需进入<code>Insert</code> 模式,方可进行编辑,输入<code>i</code>即可进入<code>Insert</code>模式</p>
 <p><img src="/images/2016-10-28/6.png" alt="img1"></p>
-<p>如下图:编辑区和状态区,编辑完成后</p>
+<h3 id="3-保存"><a href="#3-保存" class="headerlink" title="3.保存"></a>3.保存</h3><p>如下图:编辑区和状态区,编辑完成后</p>
 <ul>
 <li>按下<code>esc</code>进入<code>normal</code>模式,</li>
 <li>保存并退出=&gt;<code>:wq</code>(w:write,q:quit) 或<code>ZZ</code>或<code>:x</code></li>
@@ -387,16 +399,13 @@ $ vi hello.md  //vi 指令,创建一个文件,并进入编辑模式
 </ul>
 <p><img src="/images/2016-10-28/7.png" alt="img2"> </p>
 <p>此时,创建一个文件,并进行编辑保存的工作初步完成!</p>
-<p><strong>2. vi编辑中常用的快捷键</strong></p>
-<p><strong>模式切换</strong></p>
-<ul>
+<h2 id="vi编辑中常用的快捷键"><a href="#vi编辑中常用的快捷键" class="headerlink" title="vi编辑中常用的快捷键"></a>vi编辑中常用的快捷键</h2><h3 id="1-模式切换"><a href="#1-模式切换" class="headerlink" title="1. 模式切换"></a>1. <strong>模式切换</strong></h3><ul>
 <li>Normal模式 =&gt; <code>esc</code>或<code>Ctrl + [</code>,该模式下,按键指令,可进行快捷操作,删除,复制等等<br><img src="/images/2016-10-28/10.png" alt="img5"></li>
 <li>Insert模式 =&gt; <code>i</code>或 <code>a</code>或<code>s</code>,进入编辑模式<br><img src="/images/2016-10-28/8.png" alt="img3"></li>
 <li>V-line模式 =&gt; Normal模式下,<code>enter</code>,以空行为分界线,连着的n行属于一块儿,按<code>enter</code>可进行整块儿向下选择<br><img src="/images/2016-10-28/11.png" alt="img6"></li>
 <li>V-block模式 =&gt; Normal模式下,<code>Ctrl+v</code>进入该模式,可进块儿操作<br><img src="/images/2016-10-28/9.png" alt="img4"></li>
 </ul>
-<p><strong>Insert模式光标插入方向</strong></p>
-<ul>
+<h3 id="2-Insert模式光标插入方向"><a href="#2-Insert模式光标插入方向" class="headerlink" title="2. Insert模式光标插入方向"></a>2. <strong>Insert模式光标插入方向</strong></h3><ul>
 <li><code>i/I</code> 在光标前插入/在行首插入</li>
 <li><code>a/A</code> 在光标后插入/在行尾插入</li>
 <li><code>s/S</code> 删除光标当前内容/删除一行并插入光标</li>
@@ -404,8 +413,7 @@ $ vi hello.md  //vi 指令,创建一个文件,并进入编辑模式
 <li><code>r/R</code> 替换当前内容</li>
 <li><code>cw</code> 替换当前光标到这个词结束</li>
 </ul>
-<p><strong>光标移动</strong></p>
-<ul>
+<h3 id="3-光标移动"><a href="#3-光标移动" class="headerlink" title="3. 光标移动"></a>3. <strong>光标移动</strong></h3><ul>
 <li>左=&gt;<code>h</code>,方向键,<code>Backspace</code>(delete)</li>
 <li>下=&gt;<code>j</code>,<code>Enter</code>,<code>+</code>,方向键</li>
 <li>上=&gt;<code>k</code>,<code>-</code>,方向键</li>
@@ -430,10 +438,8 @@ $ vi hello.md  //vi 指令,创建一个文件,并进入编辑模式
 </ol>
 </li>
 </ul>
-<p><strong>复制粘贴</strong></p>
-<ul>
-<li><p>剪切</p>
-<ol>
+<h3 id="4-复制粘贴"><a href="#4-复制粘贴" class="headerlink" title="4. 复制粘贴"></a>4. <strong>复制粘贴</strong></h3><ul>
+<li>剪切<ol>
 <li><code>nx/X</code>剪切光标当前所在n个字符;</li>
 <li><code>ndd</code>剪切当前行;</li>
 <li><code>d$/0/^/G/gg/w/b</code>删除光标至该行尾;</li>
@@ -442,22 +448,25 @@ $ vi hello.md  //vi 指令,创建一个文件,并进入编辑模式
 <li><code>D</code>=<code>d$</code></li>
 </ol>
 </li>
-<li><p>复制</p>
-<ol>
+<li>删除<br>  插入模式下的删除操作<ol>
+<li>^u 删除当前航</li>
+<li>^h 删除前一个字符</li>
+<li>^w 删除前一个单词</li>
+</ol>
+</li>
+<li>复制<ol>
 <li><code>y$/0/^/G/gg/w/b/e</code>光标至该行首;</li>
 <li><code>nyy</code>复制n行;</li>
 <li><code>yt*</code>复制至<code>*</code>第一次出现;</li>
 <li><code>n&quot;a/Ayy</code>复制至<code>a</code>缓存区,可分别存储到26个英文字母的缓存区中,在分别进行粘贴; </li>
 </ol>
 </li>
-<li><p>粘贴 </p>
-<ol>
+<li>粘贴 <ol>
 <li><code>np/nP</code>粘贴至当前位置前/后;</li>
 <li><code>&quot;ap</code>粘贴<code>a</code>缓存区的内容; </li>
 </ol>
 </li>
-<li><p>替换 </p>
-<ol>
+<li>替换 <ol>
 <li><code>r/R</code>非插入式替换/替换直至<code>esc</code>;</li>
 <li><code>cc/S</code>整行替换;</li>
 <li><code>c$/0/^/G/gg/w/b/e</code>替换;</li>
@@ -466,101 +475,80 @@ $ vi hello.md  //vi 指令,创建一个文件,并进入编辑模式
 </ol>
 </li>
 </ul>
-<p><strong>撤回操作</strong></p>
-<ul>
+<h3 id="5-撤回操作"><a href="#5-撤回操作" class="headerlink" title="5. 撤回操作"></a>5. <strong>撤回操作</strong></h3><ul>
 <li>撤回=&gt; <code>u</code></li>
 <li>取消撤回=&gt;<code>Ctrl+r</code></li>
 </ul>
-<p><strong>查找</strong></p>
-<p>输入查找内容后, 按下回车, 然后使用 <code>n</code> 或 <code>N</code> 进行上下切换</p>
+<h3 id="6-查找"><a href="#6-查找" class="headerlink" title="6. 查找"></a>6. <strong>查找</strong></h3><p>输入查找内容后, 按下回车, 然后使用 <code>n</code> 或 <code>N</code> 进行上下切换</p>
 <ul>
-<li><p>语法</p>
-<pre><code>1. `/[text]\c`大小写不敏感查找
-2.  `/[text]\C` 大小写敏感查找 
-3. `/[text]`向下查找,text为查找内容,回车,n/N切换查找方向
-4. `?[text]`向上查找,text为查找内容,回车,n/N切换查找方向
-5. `*/#`向下/向上查找光标所在单词,完全一样;
-6. `g*/#`向下/向上查找光标所在单词,部分一样;
-</code></pre></li>
-<li><p>大小写敏感配置</p>
-<pre><code>设置大小写不敏感查询
-:set ignorecase
-
-如果有一个大写字母, 则切换到大小写敏感查找
-:set smartcase
+<li>语法<ol>
+<li><code>/[text]\c</code>大小写不敏感查找</li>
+<li><code>/[text]\C</code> 大小写敏感查找 </li>
+<li><code>/[text]</code>向下查找,text为查找内容,回车,n/N切换查找方向</li>
+<li><code>?[text]</code>向上查找,text为查找内容,回车,n/N切换查找方向</li>
+<li><code>*/#</code>向下/向上查找光标所在单词,完全一样;</li>
+<li><code>g*/#</code>向下/向上查找光标所在单词,部分一样;</li>
+</ol>
+</li>
+<li>大小写敏感配置<br>  设置大小写不敏感查询<pre><code>:set ignorecase
+</code></pre>  如果有一个大写字母, 则切换到大小写敏感查找<pre><code>:set smartcase
 </code></pre></li>
 </ul>
-<p><strong>替换</strong></p>
-<p>  替换范围/被替换内容/要替换成内容/[每次替换前询问confirm/不显示error/不询问整行替换global/不区分大小写ignore]</p>
-<pre><code>:[range]s/pattern/string/[c,e,g,i]
-</code></pre><p>c: 需要确认;<br>e: ;<br>g: 全局替换;<br>i: 大小写不敏感 I: 大小写敏感</p>
+<h3 id="7-替换"><a href="#7-替换" class="headerlink" title="7. 替换"></a>7. <strong>替换</strong></h3><p>替换范围/被替换内容/要替换成内容/[每次替换前询问confirm/不显示error/不询问整行替换global/不区分大小写ignore]<br>    :[range]s/pattern/string/[c,e,g,i]<br>c: 需要确认;<br>e: ;<br>g: 全局替换;<br>i: 大小写不敏感 I: 大小写敏感</p>
 <ol>
-<li><p>全局替换</p>
-<pre><code>:%s/foo/bar/g
+<li>全局替换<pre><code>:%s/foo/bar/g
 </code></pre></li>
-<li><p>当前行替换</p>
-<pre><code>:s/foo/bar/g
+<li>当前行替换<pre><code>:s/foo/bar/g
 </code></pre></li>
-<li><p>选区替换(在有选区的情况下, 输入 : 会自动添加 ‘&lt;,’&gt;)</p>
-<pre><code>:&apos;&lt;,&apos;&gt;s/foo/bar/g
+<li>选区替换(在有选区的情况下, 输入 : 会自动添加 ‘&lt;,’&gt;)<pre><code>:&apos;&lt;,&apos;&gt;s/foo/bar/g
 </code></pre></li>
-<li><p>2-11行替换</p>
-<pre><code>:2,11s/foo/bar/g
+<li>2-11行替换<pre><code>:2,11s/foo/bar/g
 </code></pre></li>
-<li><p>当前行与接下来2行</p>
-<pre><code>:.,+2s/foo/bar/g
+<li>当前行与接下来2行<pre><code>:.,+2s/foo/bar/g
 </code></pre></li>
 </ol>
-<p><strong>排版</strong></p>
-<ul>
+<h3 id="8-排版"><a href="#8-排版" class="headerlink" title="8. 排版"></a>8. <strong>排版</strong></h3><ul>
 <li><code>=</code> 按格式显示</li>
 <li><code>&lt;&lt;/&gt;&gt;</code>左缩进/右缩进;</li>
-<li><p>获取<code>tab</code>值:</p>
-<pre><code>:set shiftwidth[=4]
+<li>获取<code>tab</code>值:<pre><code>:set shiftwidth[=4]
 </code></pre></li>
-<li><p><code>~</code> 大写切换, 反向切换;</p>
-</li>
+<li><code>~</code> 大写切换, 反向切换;</li>
 <li><code>gu</code> 和 <code>gU</code>, 全部切换成小写或大写;</li>
 </ul>
-<p><strong>文件格式</strong></p>
-<pre><code>:set filetype[=html] 获取[设置]文件格式;
-</code></pre><p><strong>行号设置</strong></p>
-<pre><code>:set number
-</code></pre><p><strong>块儿操作</strong></p>
-<ul>
-<li>如在行头添加 <code>--</code></li>
-</ul>
+<h3 id="9-文件格式"><a href="#9-文件格式" class="headerlink" title="9. 文件格式"></a>9. <strong>文件格式</strong></h3><pre><code>:set filetype[=html] 获取[设置]文件格式;
+</code></pre><h3 id="10-行号设置"><a href="#10-行号设置" class="headerlink" title="10. 行号设置"></a>10. <strong>行号设置</strong></h3><pre><code>:set number
+</code></pre><h3 id="11-块儿操作"><a href="#11-块儿操作" class="headerlink" title="11. 块儿操作"></a>11. <strong>块儿操作</strong></h3><ul>
+<li><p>如在行头添加 <code>--</code></p>
 <ol>
 <li><code>^</code> 到行头</li>
 <li><code>&lt;C-v&gt;</code> 开始块儿操作</li>
 <li><code>&lt;C-d&gt;</code> 或 <code>hjkl</code> 选择操作行</li>
 <li><code>I--[ESC]</code> <code>I</code>是插入, 插入内容 ‘–’, 按下 <code>ESC</code> 为每一行生效(这里可是是删除 <code>x</code>, 替换 <code>r</code>等等操作)</li>
 </ol>
-<ul>
-<li>如在行尾添加 ‘–’</li>
-</ul>
+</li>
+<li><p>如在行尾添加 ‘–’</p>
 <ol>
 <li><code>&lt;C-v&gt;</code></li>
 <li><code>j/k</code> 选中行</li>
 <li><code>$</code> 到行尾</li>
 <li><code>A--[ESC]</code> <code>A</code>插入内容 <code>--</code>, 按下<code>ESC</code> 为每一行生效</li>
 </ol>
-<p><strong>分屏</strong></p>
-<ul>
-<li><p>左右屏</p>
-<ol>
+</li>
+</ul>
+<h3 id="12-分屏"><a href="#12-分屏" class="headerlink" title="12. 分屏"></a>12. <strong>分屏</strong></h3><ul>
+<li>左右屏<ol>
 <li><code>:vsplit</code></li>
-<li><code>&lt;C-w&gt;</code> + <code>h/l</code> 左右屏切换</li>
+<li><code>double&lt;C-w&gt;</code> or <code>&lt;C-h/l&gt;</code> 左右屏切换</li>
 </ol>
 </li>
-<li><p>上下屏</p>
-<ol>
+<li>上下屏<ol>
 <li><code>:split</code></li>
-<li><code>&lt;C-w&gt;</code> + <code>j/k</code><br><strong>书签</strong></li>
+<li><code>double&lt;C-w&gt;</code> or <code>&lt;C-j/k&gt;</code> 上下屏切换</li>
 </ol>
 </li>
-<li><p><code>ma/A</code>设置书签本文档/各文档间,<code>a/A</code>是26字母;</p>
-</li>
+</ul>
+<h3 id="13-书签"><a href="#13-书签" class="headerlink" title="13. 书签"></a>13. <strong>书签</strong></h3><ul>
+<li><code>ma/A</code>设置书签本文档/各文档间,<code>a/A</code>是26字母;</li>
 <li><code>`a</code>至书签<code>a</code>处;</li>
 <li><code>&#39;a</code>至书签<code>a</code>行行首;</li>
 </ul>
@@ -601,8 +589,8 @@ $ vi hello.md  //vi 指令,创建一个文件,并进入编辑模式
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/28/2016-10-28-build-git-blog/" rel="next" title="用git搭建博客(mac版)">
-                <i class="fa fa-chevron-left"></i> 用git搭建博客(mac版)
+              <a href="/2016/10/28/2016-10-28-build-git-blog/" rel="next" title="用 git 和 Jekyll 搭建博客(mac 版)">
+                <i class="fa fa-chevron-left"></i> 用 git 和 Jekyll 搭建博客(mac 版)
               </a>
             
           </div>
@@ -685,7 +673,7 @@ $ vi hello.md  //vi 指令,创建一个文件,并进入编辑模式
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -738,7 +726,7 @@ $ vi hello.md  //vi 指令,创建一个文件,并进入编辑模式
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-vi-基本命令"><span class="nav-number">1.</span> <span class="nav-text">一.vi 基本命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">2.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用vi创建-编辑-保存文件"><span class="nav-number">1.</span> <span class="nav-text">用vi创建,编辑,保存文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建文件"><span class="nav-number">1.1.</span> <span class="nav-text">1.创建文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-编辑文件"><span class="nav-number">1.2.</span> <span class="nav-text">2.编辑文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-保存"><span class="nav-number">1.3.</span> <span class="nav-text">3.保存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vi编辑中常用的快捷键"><span class="nav-number">2.</span> <span class="nav-text">vi编辑中常用的快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-模式切换"><span class="nav-number">2.1.</span> <span class="nav-text">1. 模式切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Insert模式光标插入方向"><span class="nav-number">2.2.</span> <span class="nav-text">2. Insert模式光标插入方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-光标移动"><span class="nav-number">2.3.</span> <span class="nav-text">3. 光标移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-复制粘贴"><span class="nav-number">2.4.</span> <span class="nav-text">4. 复制粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-撤回操作"><span class="nav-number">2.5.</span> <span class="nav-text">5. 撤回操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-查找"><span class="nav-number">2.6.</span> <span class="nav-text">6. 查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-替换"><span class="nav-number">2.7.</span> <span class="nav-text">7. 替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-排版"><span class="nav-number">2.8.</span> <span class="nav-text">8. 排版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-文件格式"><span class="nav-number">2.9.</span> <span class="nav-text">9. 文件格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-行号设置"><span class="nav-number">2.10.</span> <span class="nav-text">10. 行号设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-块儿操作"><span class="nav-number">2.11.</span> <span class="nav-text">11. 块儿操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-分屏"><span class="nav-number">2.12.</span> <span class="nav-text">12. 分屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-书签"><span class="nav-number">2.13.</span> <span class="nav-text">13. 书签</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number"></span> <span class="nav-text">参考资料</span></a></div>
             
 
           </div>
