@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/11/28/2016-11-28-markdown-tips/index.html">
 <meta property="og:site_name" content="Xiaoshier Blog">
 <meta property="og:description" content="把 markdown 常用语法: 标题, 强调, 链接, 图片, 列表及嵌套, 代码, 引用,段落和换行, 分隔符, 符号转义, 表格的记录一下，以便后期查阅。">
-<meta property="og:updated_time" content="2017-03-02T04:59:13.000Z">
+<meta property="og:updated_time" content="2017-03-03T13:48:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown常用操作">
 <meta name="twitter:description" content="把 markdown 常用语法: 标题, 强调, 链接, 图片, 列表及嵌套, 代码, 引用,段落和换行, 分隔符, 符号转义, 表格的记录一下，以便后期查阅。">
@@ -358,15 +358,15 @@
       
         <p>把 markdown 常用语法: 标题, 强调, 链接, 图片, 列表及嵌套, 代码, 引用,段落和换行, 分隔符, 符号转义, 表格的记录一下，以便后期查阅。</p>
 <a id="more"></a>
-<h1 id="一-标题"><a href="#一-标题" class="headerlink" title="一. 标题"></a>一. 标题</h1><p> 文章段落较多时，可以用标题分段。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">标题1</div><div class="line">-----</div><div class="line"></div><div class="line">标题2</div><div class="line">=====</div><div class="line"></div><div class="line"># 一级标题 </div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">###### 六级标题</div></pre></td></tr></table></figure></p>
+<h1 id="一-标题"><a href="#一-标题" class="headerlink" title="一. 标题"></a>一. 标题</h1><p> 文章段落较多时，可以用标题分段。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="section">标题1</div><div class="line">-----</span></div><div class="line"></div><div class="line"><span class="section">标题2</div><div class="line">=====</span></div><div class="line"></div><div class="line"><span class="section"># 一级标题 </span></div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line"><span class="section">###### 六级标题</span></div></pre></td></tr></table></figure></p>
 <h1 id="二、粗斜体"><a href="#二、粗斜体" class="headerlink" title="二、粗斜体"></a>二、粗斜体</h1><p><em>斜体文本</em> <em>斜体文本</em></p>
 <p><strong>粗体文本</strong> <strong>粗体文本</strong></p>
 <p><strong><em>粗斜体文本</em></strong> <strong><em>粗斜体文本</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*斜体文本* _斜体文本_</div><div class="line"></div><div class="line">**粗体文本** __粗体文本__</div><div class="line"></div><div class="line">***粗斜体文本*** ___粗斜体文本___</div></pre></td></tr></table></figure>
-<h1 id="三、链接"><a href="#三、链接" class="headerlink" title="三、链接"></a>三、链接</h1><p><a href="https://xiaoshier.github.io/" title="xiaoshier&#39;s blog">小事儿的博客1</a><br>小事儿的博客2: <a href="https://xiaoshier.github.io/">https://xiaoshier.github.io/</a><br><a href="https://xiaoshier.guthub.io/" title="xiaoshier&#39;s blog">小事儿的博客3</a>{:target=”_blank”}<br>[小事儿的博客4]<a href="https://xiaoshier.guthub.io/">xiaoshier</a>[]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">1. 行内式</div><div class="line">    [text](url[ &quot;title&quot; ]) title 可选</div><div class="line">    &lt;url&gt; 显示 url 并添加链接</div><div class="line"></div><div class="line">    [小事儿的博客1](https://xiaoshier.github.io/ &quot;xiaoshier&apos;s blog&quot;)  </div><div class="line">    小事儿的博客2: &lt;https://xiaoshier.github.io/&gt;  网址链接  </div><div class="line"></div><div class="line">2.参考式</div><div class="line"></div><div class="line">    [text][id] 行内语法</div><div class="line">    [id]: url[ &quot;title content&quot;] 链接定义[链接 title 可选]</div><div class="line"></div><div class="line">    [小事儿的博客3][1]&#123;:target=&quot;_blank&quot;&#125;   打开新的 tab 页</div><div class="line">    [小事儿的博客4][xiaoshier]</div><div class="line">    [blog][]</div><div class="line"></div><div class="line">    [1]: https://xiaoshier.guthub.io/ &quot;xiaoshier&apos;s blog&quot;</div><div class="line">    [xiaoshier]: https://xiaoshier.guthub.io/ &apos;xiaoshier blog&apos;</div><div class="line">    [blog]: https://xiaoshier.guthub.io/ &apos;xiaoshier blog&apos;</div></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="emphasis">*斜体文本*</span> <span class="emphasis">_斜体文本_</span></div><div class="line"></div><div class="line"><span class="strong">**粗体文本**</span> <span class="strong">__粗体文本__</span></div><div class="line"></div><div class="line"><span class="strong">***粗斜体文本**</span>* <span class="strong">___粗斜体文本__</span>_</div></pre></td></tr></table></figure>
+<h1 id="三、链接"><a href="#三、链接" class="headerlink" title="三、链接"></a>三、链接</h1><p><a href="https://xiaoshier.github.io/" title="xiaoshier&#39;s blog">小事儿的博客1</a><br>小事儿的博客2: <a href="https://xiaoshier.github.io/">https://xiaoshier.github.io/</a><br><a href="https://xiaoshier.guthub.io/" title="xiaoshier&#39;s blog">小事儿的博客3</a><br><a href="https://xiaoshier.guthub.io/" title="xiaoshier blog">小事儿的博客4</a><br><a href="https://xiaoshier.guthub.io/">blog</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>行内式</div><div class="line"><span class="code">    [text](url[ "title" ]) title 可选</span></div><div class="line"><span class="code">    &lt;url&gt; 显示 url 并添加链接</span></div><div class="line"></div><div class="line"><span class="code">    [小事儿的博客1](https://xiaoshier.github.io/ "xiaoshier's blog")  </span></div><div class="line"><span class="code">    小事儿的博客2: &lt;https://xiaoshier.github.io/&gt;  网址链接  </span></div><div class="line"></div><div class="line">2.参考式</div><div class="line"></div><div class="line"><span class="code">    [text][id] 行内语法</span></div><div class="line"><span class="code">    [id]: url[ "title content"] 链接定义[链接 title 可选]</span></div><div class="line"></div><div class="line"><span class="code">    [小事儿的博客3][1]&#123;:target="_blank"&#125;   打开新的 tab 页</span></div><div class="line"><span class="code">    [小事儿的博客4][xiaoshier]</span></div><div class="line"><span class="code">    [blog][]</span></div><div class="line"></div><div class="line"><span class="code">    [1]: https://xiaoshier.guthub.io/ "xiaoshier's blog"</span></div><div class="line"><span class="code">    [xiaoshier]: https://xiaoshier.guthub.io/ "xiaoshier blog"</span></div><div class="line"><span class="code">    [blog]: https://xiaoshier.guthub.io/ 'xiaoshier blog'</span></div></pre></td></tr></table></figure>
 <h1 id="四-图片"><a href="#四-图片" class="headerlink" title="四. 图片"></a>四. 图片</h1><p>图片的显示方法, 就是在链接前面加一个 ! </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">1. 行内</div><div class="line">    ![Alt text](/path/to/img.jpg)</div><div class="line"></div><div class="line">    ![Alt text](/path/to/img.jpg &quot;Optional title&quot;)</div><div class="line"></div><div class="line">2. 参考式</div><div class="line">    ![alt text]</div><div class="line">    ![alt text][id]</div><div class="line"></div><div class="line">    [alt text]: url[ &quot;image title&quot;]</div><div class="line">    [id]: url[ &quot;image title&quot;]</div></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>行内</div><div class="line"><span class="code">    ![Alt text](/path/to/img.jpg)</span></div><div class="line"></div><div class="line"><span class="code">    ![Alt text](/path/to/img.jpg "Optional title")</span></div><div class="line"></div><div class="line"><span class="bullet">2. </span>参考式</div><div class="line"><span class="code">    ![alt text]</span></div><div class="line"><span class="code">    ![alt text][id]</span></div><div class="line"></div><div class="line"><span class="code">    [alt text]: url[ "image title"]</span></div><div class="line"><span class="code">    [id]: url[ "image title"]</span></div></pre></td></tr></table></figure>
 <h1 id="五-列表"><a href="#五-列表" class="headerlink" title="五. 列表"></a>五. 列表</h1><h4 id="1-无序列表"><a href="#1-无序列表" class="headerlink" title="1. 无序列表"></a>1. 无序列表</h4><ul>
 <li>列表文本前使用 [减号+空格]</li>
 </ul>
@@ -375,7 +375,7 @@
 </ul>
 <ul>
 <li><p>列表文本前使用 [星号+空格]</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- 列表文本前使用 [减号+空格]</div><div class="line">+ 列表文本前使用 [加号+空格]</div><div class="line">* 列表文本前使用 [星号+空格]</div></pre></td></tr></table></figure>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">- </span>列表文本前使用 [减号+空格]</div><div class="line"><span class="bullet">+ </span>列表文本前使用 [加号+空格]</div><div class="line"><span class="bullet">* </span>列表文本前使用 [星号+空格]</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="2-有序列表"><a href="#2-有序列表" class="headerlink" title="2. 有序列表"></a>2. 有序列表</h4><ol>
@@ -412,7 +412,7 @@
 </code></pre> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">fdksa   </div><div class="line">fdsaj</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>格式如下:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>列出所有元素：(与子集之间不可以有空行)</div><div class="line"><span class="code">    - 无序列表元素 A</span></div><div class="line"><span class="code">        1. 元素 A 的有序子列表</span></div><div class="line"><span class="code">    - 前面加四个空格</span></div><div class="line"><span class="bullet">2. </span>列表里的多段换行：</div><div class="line"><span class="code">    前面必须加四个空格，  </span></div><div class="line"><span class="code">    这样换行，整体的格式不会乱</span></div><div class="line"><span class="bullet">3. </span>列表里引用：</div><div class="line"></div><div class="line"><span class="quote">&gt; 前面空一行  </span></div><div class="line"><span class="quote">&gt; 仍然需要在前面加四个空格</span></div><div class="line"></div><div class="line"><span class="bullet">4. </span>列表里代码段：  </div><div class="line"><span class="code">        或者直接空八个，引入代码块</span></div><div class="line"><span class="code">        </span></div><div class="line"><span class="code">    \`\`\`</span></div><div class="line"><span class="code">    前面四个空格，之后按代码\`\`\`语法</span></div><div class="line"><span class="code">    \`\`\`</span></div></pre></td></tr></table></figure></p>
+<p>格式如下:<br>    <figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>列出所有元素：(与子集之间不可以有空行)</div><div class="line"><span class="code">    - 无序列表元素 A</span></div><div class="line"><span class="code">        1. 元素 A 的有序子列表</span></div><div class="line"><span class="code">    - 前面加四个空格</span></div><div class="line"><span class="bullet">2. </span>列表里的多段换行：</div><div class="line"><span class="code">    前面必须加四个空格，  </span></div><div class="line"><span class="code">    这样换行，整体的格式不会乱</span></div><div class="line"><span class="bullet">3. </span>列表里引用：</div><div class="line"></div><div class="line"><span class="quote">&gt; 前面空一行  </span></div><div class="line"><span class="quote">&gt; 仍然需要在前面加四个空格</span></div><div class="line"></div><div class="line"><span class="bullet">4. </span>列表里代码段：  </div><div class="line"><span class="code">        或者直接空八个，引入代码块</span></div><div class="line"><span class="code">        </span></div><div class="line"><span class="code">    \`\`\`</span></div><div class="line"><span class="code">    前面四个空格，之后按代码\`\`\`语法</span></div><div class="line"><span class="code">    \`\`\`</span></div></pre></td></tr></table></figure></p>
 <h1 id="六-代码"><a href="#六-代码" class="headerlink" title="六. 代码"></a>六. 代码</h1><ol>
 <li>代码块儿<ul>
 <li>使用 ```  ```来包裹代码</li>
@@ -421,7 +421,7 @@
 </li>
 <li>行内代码<ul>
 <li>使用 ` `</li>
-<li>行内要引用 <code>` </code>, 可用多个反引号来开启和结束代码</li>
+<li>行内将` 放在代码中，eg: <code>` </code>, 可用多个反引号来开启和结束代码eg: `` ` ``</li>
 </ul>
 </li>
 </ol>
@@ -510,7 +510,6 @@
 </code></pre>
 <h1 id="十二-注释"><a href="#十二-注释" class="headerlink" title="十二. 注释"></a>十二. 注释</h1><pre><code>[](This is a comment, it will not be included)
 </code></pre><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a href="http://markdown.tw/">Markdown 语法说明</a></p>
-<p>[xiaoshier]: <a href="https://xiaoshier.guthub.io/">https://xiaoshier.guthub.io/</a> ‘xiaoshier blog’</p>
 
       
     </div>
@@ -547,8 +546,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/29/2016-10-29-git-study/" rel="next" title="git入门">
-                <i class="fa fa-chevron-left"></i> git入门
+              <a href="/2016/10/29/2016-10-29-git-study/" rel="next" title="使用git展示静态页面">
+                <i class="fa fa-chevron-left"></i> 使用git展示静态页面
               </a>
             
           </div>
@@ -631,7 +630,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -640,7 +639,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -649,7 +648,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
