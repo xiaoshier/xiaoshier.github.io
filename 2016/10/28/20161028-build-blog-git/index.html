@@ -1,0 +1,757 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="git," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="对一个只是在 git 上查找资源的人, 今天晚上折腾了一下,按照网上查的资料在 github 上建了个人博客,期间遇见不少问题,记录下来,期望能帮助到你.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用 git 和 Jekyll 搭建博客(mac 版)">
+<meta property="og:url" content="http://yoursite.com/2016/10/28/20161028-build-blog-git/index.html">
+<meta property="og:site_name" content="Xiaoshier Blog">
+<meta property="og:description" content="对一个只是在 git 上查找资源的人, 今天晚上折腾了一下,按照网上查的资料在 github 上建了个人博客,期间遇见不少问题,记录下来,期望能帮助到你.">
+<meta property="og:image" content="http://yoursite.com/images/2016-10-28/1.png">
+<meta property="og:image" content="http://yoursite.com/images/2016-10-28/2.png">
+<meta property="og:image" content="http://yoursite.com/images/2016-10-28/3.png">
+<meta property="og:image" content="http://yoursite.com/images/2016-10-28/4.png">
+<meta property="og:image" content="http://yoursite.com/images/2016-10-28/5.png">
+<meta property="og:updated_time" content="2017-03-08T19:16:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用 git 和 Jekyll 搭建博客(mac 版)">
+<meta name="twitter:description" content="对一个只是在 git 上查找资源的人, 今天晚上折腾了一下,按照网上查的资料在 github 上建了个人博客,期间遇见不少问题,记录下来,期望能帮助到你.">
+<meta name="twitter:image" content="http://yoursite.com/images/2016-10-28/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/28/20161028-build-blog-git/"/>
+
+
+
+
+
+  <title> 用 git 和 Jekyll 搭建博客(mac 版) | Xiaoshier Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiaoshier Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/28/20161028-build-blog-git/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Xiaoshier">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Xiaoshier Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Xiaoshier Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                用 git 和 Jekyll 搭建博客(mac 版)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-28T03:57:04+08:00">
+                2016-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>对一个只是在 git 上查找资源的人, 今天晚上折腾了一下,按照网上查的资料在 github 上建了个人博客,期间遇见不少问题,记录下来,期望能帮助到你.</p>
+<a id="more"></a>
+<p>设备: MacBook Pro</p>
+<p>版本: OS X EI Capitan 10.11.5(此处写系统级别,是因为 mac 电脑在后面安装 jekyll处有些坑)</p>
+<h2 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h2><p><a href="https://pages.github.com/">GitHub Pages</a> 可以被认为是用户编写的、托管在github上的静态网页。<br><a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">GitHub Pages</a> 需要创建 <code>master</code> 或 <code>gh-pages</code> 分支, 设置其中一个作为发布资源,本文在<code>master</code>分支下创建博客<br><em>注: 也可以创建一个新的 repository,没有父节点的分支<code>gh-pages</code>,将文件放在该分支中 (因为github规定，只有该分支中 <code>gh-pages</code>的页面，才会生成网页文件,在username.github.io中例外)</em></p>
+<h2 id="Jekyll"><a href="#Jekyll" class="headerlink" title="Jekyll"></a>Jekyll</h2><p><a href="http://jekyllcn.com/">Jekyll</a> 是一个静态站点生成器，它会根据网页源码生成静态文件。它提供了模板、变量、插件等功能，所以实际上可以用来编写整个网站</p>
+<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><h4 id="1-创建GitHub-Pages"><a href="#1-创建GitHub-Pages" class="headerlink" title="1. 创建GitHub Pages"></a>1. 创建<a href="https://pages.github.com/">GitHub Pages</a></h4><ul>
+<li><p>首先在 github 上创建新的repository,名字为 username.github.io;</p>
+<p><img src="/images/2016-10-28/1.png" alt="img1"><br><img src="/images/2016-10-28/2.png" alt="img2"></p>
+</li>
+</ul>
+<ul>
+<li><p>在本地创建一个文件夹,存储博客内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ mkdir blog_demo</div><div class="line">$ <span class="built_in">cd</span> blog_demo</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/username/username.github.io</div><div class="line">$ <span class="built_in">cd</span> username.github.io</div><div class="line">$ <span class="built_in">echo</span> <span class="string">"Hello World"</span> &gt; index.html</div></pre></td></tr></table></figure>
+<p><em>此时在浏览器中输入 <code>https://username.github.io</code> ,你就可以看见 Hello,World这两个单词了</em></p>
+</li>
+</ul>
+<h4 id="2-安装Jekyll"><a href="#2-安装Jekyll" class="headerlink" title="2.安装Jekyll"></a>2.安装<a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">Jekyll</a></h4><ul>
+<li><p>需要 Ruby 2.0.0及以上版本版本,低于2.0.0的自行谷歌,此处给出更新链接<a href="https://segmentfault.com/a/1190000003784636">安装更高版本Ruby</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ruby --version</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装 Bundler</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem install bundler</div></pre></td></tr></table></figure>
+<p>若出现问题使用下面<a href="http://stackoverflow.com/questions/32891965/error-while-executing-gem-errnoeperm-operation-not-permitted">命令</a>:<br><img src="/images/2016-10-28/3.png" alt="img3"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo gem install -n /usr/<span class="built_in">local</span>/bin bundler</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用 Bundler 安装 Jekyll</p>
+<p>还记得么,当前文件夹为 username.github.io, 使用编辑器在改文件夹得根目录下创建一个文件,文件名为<code>Gemfile</code>,内容为</p>
+<pre><code>source &apos;https://rubygems.org&apos;
+gem &apos;github-pages&apos;, group: :jekyll_plugins
+</code></pre></li>
+<li><p>安装 Jekyll以及他的依赖(安装时没有任何进度条之类的提示,半天没反应,我当时以为又是哪里出问题了,所以请耐心等待;若安装出现暂停,请按照提示进行,或输入密码,或从提示中复制另外的执行命令即可)<br><img src="/images/2016-10-28/4.png" alt="img4"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bundle install</div></pre></td></tr></table></figure>
+</li>
+<li><p>生成 Jekyll 文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bundle <span class="built_in">exec</span> jekyll new . --force</div></pre></td></tr></table></figure>
+<p>该命令执行后,会在 <code>username.github.io</code> 中生成 Jekyll所需的文件,在编辑器中打开 <code>Gemfile</code> 文件,删除下面内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="string">"jekyll"</span>, <span class="string">"3.2.1"</span></div></pre></td></tr></table></figure>
+<p>去掉下面内容的注释,即去除 <code>#</code> 号:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem <span class="string">"github-pages"</span>, group :jekyll_plugins</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建本地 Jekyll站点</p>
+<p>执行如下命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bundle <span class="built_in">exec</span> jekyll serve</div></pre></td></tr></table></figure>
+<p><img src="/images/2016-10-28/5.png" alt="img5"></p>
+<p>此时会报错, 在_config.yml文件末尾添加<a href="https://github.com/jekyll/jekyll/issues/2938">下面语句</a>即可;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">exclude: [vendor]</div></pre></td></tr></table></figure>
+<p>再次执行上面命令,成功后在浏览器中打开 <code>http://127.0.0.1:4000/</code></p>
+<p>成功打开后,咦,样式怎么不正确呢,此时需要修改配置文件<code>_config.yml&#39;的参数,修改其中的</code>url`即可</p>
+</li>
+</ul>
+<h4 id="3-上传至-github"><a href="#3-上传至-github" class="headerlink" title="3. 上传至 github"></a>3. 上传至 github</h4><p>执行如下上传 github命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git add --all</div><div class="line">$ git commit -m <span class="string">"Initial commit"</span></div><div class="line">$ git push -u origin master</div></pre></td></tr></table></figure></p>
+<h4 id="4-查看博客"><a href="#4-查看博客" class="headerlink" title="4. 查看博客"></a>4. 查看博客</h4><p>上传成功后, 在浏览器中打开<code>username.github.io</code>,你的 blog 已经建好了</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p> <a href="https://pages.github.com/">GitHub Pages</a> 官方说明<br> 安装 <a href="http://jekyllcn.com/">Jekyll</a> 在本地配置 Jekyll 环境，实现本地 Blog 配置改动和博文发布的预览。<br> <a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">Setting up your GitHub Pages site locally with Jekyll</a><br> 阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门</a><br> <a href="https://help.github.com/articles/user-organization-and-project-pages/">个人,组织,项目创建 github pages 的详解</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/28/20161028-vim-study/" rel="prev" title="vim 常用操作">
+                vim 常用操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Xiaoshier" />
+          <p class="site-author-name" itemprop="name">Xiaoshier</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Pages"><span class="nav-number">1.</span> <span class="nav-text">GitHub Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jekyll"><span class="nav-number">2.</span> <span class="nav-text">Jekyll</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建博客"><span class="nav-number">3.</span> <span class="nav-text">搭建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-创建GitHub-Pages"><span class="nav-number">3.0.1.</span> <span class="nav-text">1. 创建GitHub Pages</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装Jekyll"><span class="nav-number">3.0.2.</span> <span class="nav-text">2.安装Jekyll</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-上传至-github"><span class="nav-number">3.0.3.</span> <span class="nav-text">3. 上传至 github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-查看博客"><span class="nav-number">3.0.4.</span> <span class="nav-text">4. 查看博客</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiaoshier</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
