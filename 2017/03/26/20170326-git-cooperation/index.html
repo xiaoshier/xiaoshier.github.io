@@ -98,7 +98,7 @@
 <meta property="og:image" content="http://yoursite.com/images/2017-03-26/16.png">
 <meta property="og:image" content="http://yoursite.com/images/2017-03-26/17.png">
 <meta property="og:image" content="http://yoursite.com/images/2017-03-26/18.png">
-<meta property="og:updated_time" content="2017-03-26T16:38:36.000Z">
+<meta property="og:updated_time" content="2017-03-30T05:53:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作中 git 的使用">
 <meta name="twitter:description" content="工作使用 git 和 gerrit,  记录一下以后少踩坑.">
@@ -442,12 +442,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reset HEAD file</div></pre></td></tr></table></figure>
 </li>
 <li><p>删除文件<br>从版本库删除文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git rm file</div><div class="line">$ git commit -m <span class="string">"delete some file"</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git rm file //删除工作区文件, 并添加至缓存区</div><div class="line">$ git commit -m <span class="string">"delete some file"</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ rm file</div><div class="line">$ git commit <span class="_">-a</span></div></pre></td></tr></table></figure>
-<p>删错了, 版本区有该文件,  将工作区内容回滚至与版本区内容一致<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -- file</div></pre></td></tr></table></figure></p>
+<p>找回删除文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git reset HEAD file //清除缓存信息</div><div class="line">$ git checkout -- file //找回删除文件(未提交至版本库)</div><div class="line">$ git reset --hard HEAD^ //已经提交至仓库的, 只能通过 reset 回退(已提交至版本库)</div></pre></td></tr></table></figure></p>
+<p>或 本地手动删除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ rm file //删除工作区文件(1)</div><div class="line">$ git commit <span class="_">-a</span> -m <span class="string">"commit log"</span> //添加至缓存区, 并提交至版本库(2)</div></pre></td></tr></table></figure>
+<p>删错了, 版本区有该文件,  将工作区内容回滚至与版本区内容一致<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git checkout -- file //只执行了(1)</div><div class="line">$ git reset --hard HEAD^ //执行了(2)即已经提交至仓库的,只能通过 reset 回退(已提交至版本库)</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -484,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/26/20170326-vim-plugin/" rel="next" title="20170326-vim-plugin">
-                <i class="fa fa-chevron-left"></i> 20170326-vim-plugin
+              <a href="/2017/03/26/20170326-vim-plugin/" rel="next" title="vim-plugin">
+                <i class="fa fa-chevron-left"></i> vim-plugin
               </a>
             
           </div>
@@ -493,6 +494,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/30/20170330-some-acknowledge-about-server/" rel="prev" title="对服务器的一些认识">
+                对服务器的一些认识 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -564,7 +569,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -573,7 +578,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -582,7 +587,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
