@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="server," />
 
 
 
@@ -87,12 +87,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xiaoshier Blog">
-<meta property="og:url" content="http://yoursite.com/categories/bash/index.html">
+<meta name="description" content="新工作入职一个多月, 在这一个月内使用到了不少新技术, 现在总结一下使用 nginx 遇到的问题.先记录一下, 后期完善.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决Mac使用 nginx 启服务, 同一局域网下手机无法访问">
+<meta property="og:url" content="http://yoursite.com/2017/04/29/20170429-use-nginx/index.html">
 <meta property="og:site_name" content="Xiaoshier Blog">
+<meta property="og:description" content="新工作入职一个多月, 在这一个月内使用到了不少新技术, 现在总结一下使用 nginx 遇到的问题.先记录一下, 后期完善.">
+<meta property="og:image" content="http://yoursite.com/images/2017-04-29/imgSetting.png">
+<meta property="og:updated_time" content="2017-05-01T23:57:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xiaoshier Blog">
+<meta name="twitter:title" content="解决Mac使用 nginx 启服务, 同一局域网下手机无法访问">
+<meta name="twitter:description" content="新工作入职一个多月, 在这一个月内使用到了不少新技术, 现在总结一下使用 nginx 遇到的问题.先记录一下, 后期完善.">
+<meta name="twitter:image" content="http://yoursite.com/images/2017-04-29/imgSetting.png">
 
 
 
@@ -120,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/bash/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/29/20170429-use-nginx/"/>
 
 
 
 
 
-  <title> 分类: bash | Xiaoshier Blog </title>
+  <title> 解决Mac使用 nginx 启服务, 同一局域网下手机无法访问 | Xiaoshier Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -151,7 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,47 +251,166 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        bash
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/24/20170224-bash-point/" itemprop="url">
-              
-                <span itemprop="name">bash 常用操作</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-24T21:28:51+08:00"
-              content="2017-02-24" >
-          02-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/29/20170429-use-nginx/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Xiaoshier">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Xiaoshier Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Xiaoshier Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                解决Mac使用 nginx 启服务, 同一局域网下手机无法访问
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-29T14:36:22+08:00">
+                2017-04-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>新工作入职一个多月, 在这一个月内使用到了不少新技术, 现在总结一下使用 nginx 遇到的问题.<br>先记录一下, 后期完善.</p>
+<a id="more"></a>
+<p>nginx 已配置好, 电脑上也能正常访问. 手机输入链接地址, 却无法连接上.</p>
+<ol>
+<li><p>解决方案, 把 mac 防火墙关掉即可, 我目前是在设置里, 直接把防火墙关闭, 然后可以正常访问的.<br><img src="/images/2017-04-29/imgSetting.png" alt="imgSetting"></p>
+</li>
+<li><p>以下是命令行操作, 目前没有试验过, 因为还有很多东西不懂, 留在以后再进行修改</p>
+<ul>
+<li><a href="https://www.v2ex.com/t/219235">如何取消 OS X 防火墙对 Nginx 的 block ？</a></li>
+<li><a href="http://3.14159265.com/2016/01/19/mac-nginx-firewall-block/">解决 macOS 防火墙 Block Nginx</a></li>
+<li><a href="http://ju.outofmemory.cn/entry/154709">Mac下通过HomeBrew安装Nginx的坑</a></li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/server/" rel="tag"># server</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/26/20170326-git-cooperation/" rel="next" title="工作中 git 的使用">
+                <i class="fa fa-chevron-left"></i> 工作中 git 的使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -293,6 +418,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -476,6 +605,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
