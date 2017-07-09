@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/8.png">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/11.png">
 <meta property="og:image" content="http://yoursite.com/images/2016-10-28/9.png">
-<meta property="og:updated_time" content="2017-03-11T02:20:09.000Z">
+<meta property="og:updated_time" content="2017-05-31T02:36:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim 常用操作">
 <meta name="twitter:description" content="vim学习之查漏补缺.">
@@ -509,9 +509,13 @@
 <h3 id="8-排版"><a href="#8-排版" class="headerlink" title="8. 排版"></a>8. <strong>排版</strong></h3><ul>
 <li><code>=</code> 按格式显示</li>
 <li><code>&lt;&lt;/&gt;&gt;</code>左缩进/右缩进;</li>
-<li>获取<code>tab</code>值:<pre><code>:set shiftwidth[=4]
+<li>获取<code>tab</code>值:<pre><code>:set tabstop[=4]
 </code></pre></li>
-<li><code>~</code> 大写切换, 反向切换;</li>
+<li><p>每一级缩进长度</p>
+<pre><code>:set shiftwidth[=4]
+</code></pre></li>
+<li><p><code>~</code> 大写切换, 反向切换;</p>
+</li>
 <li><code>gu</code> 和 <code>gU</code>, 全部切换成小写或大写;</li>
 </ul>
 <h3 id="9-文件格式"><a href="#9-文件格式" class="headerlink" title="9. 文件格式"></a>9. <strong>文件格式</strong></h3><pre><code>:set filetype[=html] 获取[设置]文件格式;
@@ -554,7 +558,8 @@
 <h2 id="vim-相关"><a href="#vim-相关" class="headerlink" title="vim 相关"></a>vim 相关</h2><h3 id="1-MacVim"><a href="#1-MacVim" class="headerlink" title="1. MacVim"></a>1. <a href="https://github.com/macvim-dev/macvim">MacVim</a></h3><p>the text editor for Mac OS X</p>
 <h3 id="2-spf13-vim"><a href="#2-spf13-vim" class="headerlink" title="2. spf13-vim"></a>2. <a href="http://vim.spf13.com/#vimrc">spf13-vim</a></h3><p>一个 vim 插件的集合体，你所能用到的插件，基本上都在这里可以找到。一键式安装。<br><a href="https://github.com/VundleVim/Vundle.vim#about">vundle</a> a Vim plugin manager</p>
 <h3 id="3-Vimium"><a href="#3-Vimium" class="headerlink" title="3. Vimium"></a>3. <a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Vimium</a></h3><p>Chrome浏览器插件，可以在 Chrome 中使用键盘操作页面，快捷键如同 Vim。If you use vim that you are worth owing Vimium. It’s so cool.<br>插件如是介绍 “The Hacker’s Browser. Vimium provides keyboard shortcuts for navigation and control in the spirit of Vim.”</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>1.<a href="http://www.study-area.org/tips/vim/index.html">大家來學VIM</a></p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><h3 id="1-删除光标所在单词-并进入编辑模式bce"><a href="#1-删除光标所在单词-并进入编辑模式bce" class="headerlink" title="1. 删除光标所在单词, 并进入编辑模式bce"></a>1. 删除光标所在单词, 并进入编辑模式<code>bce</code></h3><h3 id="2-查找"><a href="#2-查找" class="headerlink" title="2. 查找"></a>2. 查找</h3><pre><code>`*` 与当前光标所在单词相同的下一个单词
+</code></pre><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>1.<a href="http://www.study-area.org/tips/vim/index.html">大家來學VIM</a></p>
 
       
     </div>
@@ -675,7 +680,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -693,7 +698,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -728,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用vi创建-编辑-保存文件"><span class="nav-number">1.</span> <span class="nav-text">用vi创建,编辑,保存文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建文件"><span class="nav-number">1.1.</span> <span class="nav-text">1.创建文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-编辑文件"><span class="nav-number">1.2.</span> <span class="nav-text">2.编辑文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-保存"><span class="nav-number">1.3.</span> <span class="nav-text">3.保存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vi编辑中常用的快捷键"><span class="nav-number">2.</span> <span class="nav-text">vi编辑中常用的快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-模式切换"><span class="nav-number">2.1.</span> <span class="nav-text">1. 模式切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Insert模式光标插入方向"><span class="nav-number">2.2.</span> <span class="nav-text">2. Insert模式光标插入方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-光标移动"><span class="nav-number">2.3.</span> <span class="nav-text">3. 光标移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-复制粘贴"><span class="nav-number">2.4.</span> <span class="nav-text">4. 复制粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-撤回操作"><span class="nav-number">2.5.</span> <span class="nav-text">5. 撤回操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-查找"><span class="nav-number">2.6.</span> <span class="nav-text">6. 查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-替换"><span class="nav-number">2.7.</span> <span class="nav-text">7. 替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-排版"><span class="nav-number">2.8.</span> <span class="nav-text">8. 排版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-文件格式"><span class="nav-number">2.9.</span> <span class="nav-text">9. 文件格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-行号设置"><span class="nav-number">2.10.</span> <span class="nav-text">10. 行号设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-块儿操作"><span class="nav-number">2.11.</span> <span class="nav-text">11. 块儿操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-分屏"><span class="nav-number">2.12.</span> <span class="nav-text">12. 分屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-书签"><span class="nav-number">2.13.</span> <span class="nav-text">13. 书签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-相关"><span class="nav-number">3.</span> <span class="nav-text">vim 相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-MacVim"><span class="nav-number">3.1.</span> <span class="nav-text">1. MacVim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-spf13-vim"><span class="nav-number">3.2.</span> <span class="nav-text">2. spf13-vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Vimium"><span class="nav-number">3.3.</span> <span class="nav-text">3. Vimium</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number"></span> <span class="nav-text">参考资料</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用vi创建-编辑-保存文件"><span class="nav-number">1.</span> <span class="nav-text">用vi创建,编辑,保存文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建文件"><span class="nav-number">1.1.</span> <span class="nav-text">1.创建文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-编辑文件"><span class="nav-number">1.2.</span> <span class="nav-text">2.编辑文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-保存"><span class="nav-number">1.3.</span> <span class="nav-text">3.保存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vi编辑中常用的快捷键"><span class="nav-number">2.</span> <span class="nav-text">vi编辑中常用的快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-模式切换"><span class="nav-number">2.1.</span> <span class="nav-text">1. 模式切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Insert模式光标插入方向"><span class="nav-number">2.2.</span> <span class="nav-text">2. Insert模式光标插入方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-光标移动"><span class="nav-number">2.3.</span> <span class="nav-text">3. 光标移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-复制粘贴"><span class="nav-number">2.4.</span> <span class="nav-text">4. 复制粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-撤回操作"><span class="nav-number">2.5.</span> <span class="nav-text">5. 撤回操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-查找"><span class="nav-number">2.6.</span> <span class="nav-text">6. 查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-替换"><span class="nav-number">2.7.</span> <span class="nav-text">7. 替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-排版"><span class="nav-number">2.8.</span> <span class="nav-text">8. 排版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-文件格式"><span class="nav-number">2.9.</span> <span class="nav-text">9. 文件格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-行号设置"><span class="nav-number">2.10.</span> <span class="nav-text">10. 行号设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-块儿操作"><span class="nav-number">2.11.</span> <span class="nav-text">11. 块儿操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-分屏"><span class="nav-number">2.12.</span> <span class="nav-text">12. 分屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-书签"><span class="nav-number">2.13.</span> <span class="nav-text">13. 书签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-相关"><span class="nav-number">3.</span> <span class="nav-text">vim 相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-MacVim"><span class="nav-number">3.1.</span> <span class="nav-text">1. MacVim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-spf13-vim"><span class="nav-number">3.2.</span> <span class="nav-text">2. spf13-vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Vimium"><span class="nav-number">3.3.</span> <span class="nav-text">3. Vimium</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充"><span class="nav-number">4.</span> <span class="nav-text">补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-删除光标所在单词-并进入编辑模式bce"><span class="nav-number">4.1.</span> <span class="nav-text">1. 删除光标所在单词, 并进入编辑模式bce</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-查找"><span class="nav-number">4.2.</span> <span class="nav-text">2. 查找</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number"></span> <span class="nav-text">参考资料</span></a></div>
             
 
           </div>

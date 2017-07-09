@@ -1,0 +1,749 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="java," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="第一次学习 java, 学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初探 java">
+<meta property="og:url" content="http://yoursite.com/2017/07/04/20170704-first-time-to-java/index.html">
+<meta property="og:site_name" content="Xiaoshier Blog">
+<meta property="og:description" content="第一次学习 java, 学习笔记">
+<meta property="og:updated_time" content="2017-07-07T10:00:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初探 java">
+<meta name="twitter:description" content="第一次学习 java, 学习笔记">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/04/20170704-first-time-to-java/"/>
+
+
+
+
+
+  <title> 初探 java | Xiaoshier Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiaoshier Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/04/20170704-first-time-to-java/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Xiaoshier">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Xiaoshier Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Xiaoshier Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                初探 java
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T11:39:35+08:00">
+                2017-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>第一次学习 java, 学习笔记<br><a id="more"></a></p>
+<h2 id="安装环境概念"><a href="#安装环境概念" class="headerlink" title="安装环境概念"></a>安装环境概念</h2><ol>
+<li>JVM<br> java 虚拟机( java virtual machine )<blockquote>
+<p>运行 Java bytecode 的虚拟机, 以堆栈结构机器来进行实做. 有自己完善的硬件架构, 如处理器, 堆栈, 寄存器等, 还有相应的指令系统. JVM 屏蔽了与具体操作系统平台相关的信息, 使得 Java 程序只需生成在 Java 虚拟机上运行的目标代码(字节码), 就可以在多种平台上不加修改地运行. 通过对中央处理器( CPU ) 所执行的软件实现, 实现能执行编译过得 Java 程序码<br>  理解: 对上提供统一的接口, 对下即操作系统分别进行封装, 实现编写一套代码, 多处使用.</p>
+</blockquote>
+</li>
+<li>JDK<br> java 开发工具包 (java development kit)<br> java 开发人员用来编译, 调试程序使用<br> 包含组件: <ul>
+<li>用于 Java 开发的组件: javac( 编译器, 将后缀名为.java 的源代码编译成后缀为.class的字节码 ); java(运行工具, 运行.class字节码); jar( 打包工具, 将相关类打包成一个文件); javadoc( 文档生成器, 从源码注释中提取文档, 注释需匹配规范); jdb debugger(调试工具); jps( 显示当前 java 程序运行的进程装填 ); javap( 反编译程序 ); appletviewer( 运行和调试 applet 程序的工具, 不需要使用浏览器 ); javah( 从 java 类生成 c 头文件和 c 源文件. 这些文件提供了连接胶合, 使java 和 c 代码可以进行交互 ); javaws( 运行 JNLP 程序 ); extcheck( 一个检测 jar 包冲突的工具 ); apt( 注释处理工具 ); jhat( java 堆分析工具 ); jstack( 栈跟踪程序 ); jstat( JVM 检测同级工具 ); jstatd( jstat 守护进程); jinfo( 获取 java 进程内存映射信息 ); idlj( IDL-to-Java 编译器. 将 IDL 语言转化为 java 文件 ); policytool( 一个 GUI 的策略文件创建和管理工具 ); jrunscript( 命令行脚本运行 ) </li>
+<li>完整的 JRE</li>
+<li>样例程序, 展示 Java API</li>
+</ul>
+</li>
+<li>JRE<br> java 运行时环境 (java runtime environment)<br> 包括: java 虚拟机, java 基础类库<br>  普通用户安装来运行 java 程序</li>
+</ol>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="安装-JDK"><a href="#安装-JDK" class="headerlink" title="安装 JDK"></a>安装 JDK</h3><p>JDK: Java Development Kit</p>
+<ol>
+<li><p>查询本机 java 和 JDK 版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java -version //java 版本</div><div class="line">javac -version //jdk 版本</div></pre></td></tr></table></figure>
+<p> 查看电脑里都安装了那些版本 jdk, 都在<code>/Library/Java/JavaVirtualMachines</code>中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /Library/Java/JavaVirtualMachines</div><div class="line">ll</div></pre></td></tr></table></figure>
+</li>
+<li><p>JDK 版本切换</p>
+<ul>
+<li><p>使用的是 zsh, 所以在 .zshrc 中添加别名进行切换</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi ~/.zshrc</div></pre></td></tr></table></figure>
+<p>添加如下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 设置 JDK 7</span></div><div class="line"><span class="built_in">export</span> JAVA_7_HOME=`/usr/libexec/java_home -v 1.7`</div><div class="line"><span class="comment"># 设置 JDK 8</span></div><div class="line"><span class="built_in">export</span> JAVA_8_HOME=`/usr/libexec/java_home -v 1.8`</div><div class="line"></div><div class="line"><span class="comment">#默认JDK 7</span></div><div class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$JAVA_7_HOME</span></div><div class="line"></div><div class="line"><span class="comment">#alias命令动态切换JDK版本</span></div><div class="line"><span class="built_in">alias</span> jdk7=<span class="string">"export JAVA_HOME=<span class="variable">$JAVA_7_HOME</span>"</span></div><div class="line"><span class="built_in">alias</span> jdk8=<span class="string">"export JAVA_HOME=<span class="variable">$JAVA_8_HOME</span>"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> .zshrc</div></pre></td></tr></table></figure>
+</li>
+<li><p>切换 JDK</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jdk7 //切为1.7版本</div><div class="line">jdk8 //切为1.8版本</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="编译运行"><a href="#编译运行" class="headerlink" title="编译运行"></a>编译运行</h2><ol>
+<li><p>编写文件<br> 存储类型为 .java</p>
+<ul>
+<li><p>类名需要和文件名一致, 不然会报错</p>
+<ul>
+<li><p>正确<br> eg: helloWorld.java</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">helloWorld</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> class <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.print(<span class="string">"hello world"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 编译与运行</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">javac helloWorld.java //compile</div><div class="line">java helloWorld   //operate</div></pre></td></tr></table></figure>
+</li>
+<li><p>错误<br>  eg: helloWorld.java 类名为 HelloWorld</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> class <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.print(<span class="string">"hello world"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>  编译与运行</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">javac helloWorld.java</div></pre></td></tr></table></figure>
+<p>  error: helloWorld.java:1: error: class HelloWorld is public, should be declared in a file named HelloWorld.java<br>  public class HelloWorld{}</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">javac helloWorld.java</div></pre></td></tr></table></figure>
+</li>
+<li><p>运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java helloWorld</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
+<li>java 一个文件中只包含一个主类, 即用 public 声明的类, 文件名和主类名保持一致</li>
+<li>测试文件与类文件分别放置</li>
+<li>只用编译一个入口文件, 入口文件引用的相关的文件都会被编译, 并且在编译时会去判断正误, 在同一目录下, </li>
+<li><p>一个文件中, 可以共存多个以 class 声明的类, 在编译时, 会单独编译出该 class 命名的文件, 文件名为该类名</p>
+</li>
+<li><p>声明变量<br>  变量是保存对象的地址, 它指向对象存储的物理位置, 每个实例化的对象, 系统都会给其分配内存, 变量仅是用来是指向该内存地址<br> 变量可以是对象的状态, 局部变量(声明在方法中的变量), 参数,执行方法的返回值<br> <em>此处的 className 是类名, 可以是 java 内建类 eg: String, init, ArrayLiat, etc; 也可以是自定义类</em></p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">className objName = <span class="keyword">new</span> className(); <span class="comment">//实例化一个对象, 并赋值给 objName 变量</span></div><div class="line">eg: String gogo = <span class="keyword">new</span> String( <span class="string">"I am a string"</span> ); <span class="comment">//实例一个字符型对象(传入参数), 赋值给 gogo 的变量</span></div><div class="line">    HelloWorld hello = <span class="keyword">new</span> HelloWorld();</div><div class="line">className[] objName = <span class="keyword">new</span> className[length];</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/02/20170702-first-time-to-android/" rel="next" title="android 初接触">
+                <i class="fa fa-chevron-left"></i> android 初接触
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Xiaoshier" />
+          <p class="site-author-name" itemprop="name">Xiaoshier</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装环境概念"><span class="nav-number">1.</span> <span class="nav-text">安装环境概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-JDK"><span class="nav-number">2.1.</span> <span class="nav-text">安装 JDK</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译运行"><span class="nav-number">3.</span> <span class="nav-text">编译运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">4.</span> <span class="nav-text">知识点</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiaoshier</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
