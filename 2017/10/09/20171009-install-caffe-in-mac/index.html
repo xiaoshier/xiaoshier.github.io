@@ -1,0 +1,730 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="caffe,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="Mac 下安装 caffe 遇见的坑, 安装了的环境因为新的需要修改, 然后环境被改坏, 再找再改, 整整弄了好几天, 已哭晕在电脑前, 必须记录一下">
+<meta name="keywords" content="caffe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac 安装 caffe 遇见的坑">
+<meta property="og:url" content="http://yoursite.com/2017/10/09/20171009-install-caffe-in-mac/index.html">
+<meta property="og:site_name" content="Xiaoshier Blog">
+<meta property="og:description" content="Mac 下安装 caffe 遇见的坑, 安装了的环境因为新的需要修改, 然后环境被改坏, 再找再改, 整整弄了好几天, 已哭晕在电脑前, 必须记录一下">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/2017-10-09/1.png">
+<meta property="og:image" content="http://yoursite.com/images/2017-10-09/3.png">
+<meta property="og:image" content="http://yoursite.com/images/2017-10-09/2.png">
+<meta property="og:image" content="http://yoursite.com/images/2017-10-09/4.png">
+<meta property="og:image" content="http://yoursite.com/images/2017-10-09/5.png">
+<meta property="og:updated_time" content="2017-10-09T10:19:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac 安装 caffe 遇见的坑">
+<meta name="twitter:description" content="Mac 下安装 caffe 遇见的坑, 安装了的环境因为新的需要修改, 然后环境被改坏, 再找再改, 整整弄了好几天, 已哭晕在电脑前, 必须记录一下">
+<meta name="twitter:image" content="http://yoursite.com/images/2017-10-09/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/10/09/20171009-install-caffe-in-mac/">
+
+
+
+
+
+  <title> Mac 安装 caffe 遇见的坑 | Xiaoshier Blog </title>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiaoshier Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/09/20171009-install-caffe-in-mac/">
+
+  <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Xiaoshier">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Xiaoshier Blog">
+    <span style="display:none" itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Xiaoshier Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Mac 安装 caffe 遇见的坑
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-09T12:09:03+08:00">
+                2017-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Mac 下安装 caffe 遇见的坑, 安装了的环境因为新的需要修改, 然后环境被改坏, 再找再改, 整整弄了好几天, 已哭晕在电脑前, 必须记录一下</p>
+<a id="more"></a>
+<p>设备:<br>Mac Pro: macOS Sierra Version 10.12.6<br>xcode: Version 9.0</p>
+<p><em>使用 cpu 和 Anaconda Python</em><br>make all<br>make test<br>make runtest<br>一次就可以了</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="按照官网网上教程安装"><a href="#按照官网网上教程安装" class="headerlink" title="按照官网网上教程安装"></a>按照官网网上教程安装</h3><ol>
+<li><p>下载安装依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install -vd snappy leveldb gflags glog szip lmdb</span><br><span class="line">brew tap homebrew/science</span><br><span class="line">brew install hdf5 opencv</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果是 Anaconda Python</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew edit opencv</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-DPYTHON_LIBRARY=#&#123;py_prefix&#125;/lib/libpython2.7.dylib</span><br><span class="line">  -DPYTHON_INCLUDE_DIR=#&#123;py_prefix&#125;/include/python2.7</span><br></pre></td></tr></table></figure>
+<p> 改为</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-DPYTHON_LIBRARY=/Users/xiaoshier/anaconda/lib/libpython3.6.dylib</span><br><span class="line">  -DPYTHON_INCLUDE_DIR=/Users/xiaoshier/anaconda/include/python3.6</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install --build-from-source --with-python -vd protobuf</span><br><span class="line">brew install --build-from-source -vd boost boost-python</span><br><span class="line">brew install protobuf boost</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载 caffe 包<br>创建个文件夹, 将 caffe 下载至该文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/BVLC/caffe.git</span><br><span class="line">cd caffe</span><br><span class="line">mv Makefile.config.example Makefile.config</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改 Makefile.config<br>使用 CPU, blas 使用 openblas,  python 使用 Anaconda 的 python</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CPU_ONLY :=1 //前的#去掉</span><br><span class="line">BLAS := atlas 改为 BLAS := open //使用 openblas</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">make all</span><br><span class="line">make test</span><br><span class="line">make runtest</span><br><span class="line">make pycaffe</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="error"><a href="#error" class="headerlink" title="error"></a>error</h2><ol>
+<li><p>make test时报错, 原因: 使用的是 openblas, 但是 Makefile.config 中的相应内容未匹配<br><img src="/images/2017-10-09/1.png" alt="img1"><br>解决方法 Makefile.config 中如下注释去掉<br><img src="/images/2017-10-09/3.png" alt="img2"></p>
+</li>
+<li><p>make pycaffe 报错, 原因: 使用的是 Anconada 里的 python, 相应的路径要调整正确<br>目前仍未调通, 整了又一天, 哭死<br><img src="/images/2017-10-09/2.png" alt="img3"><br>解决方法 Makefile.config 中如下注释去掉<br><img src="/images/2017-10-09/4.png" alt="img4"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PYTHONPATH=/Users/xiaoshier/anaconda/lib/python3.6</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>然后执行安装的第3步, 不过是卸载然后执行第2步再执行第3步</p>
+<ol start="3">
+<li><p>make all 时报错, 原因: 因为使用的是 opencv3</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CXX/LD -o .build_release/tools/convert_imageset.bin</span><br><span class="line">.build_release/lib/libcaffe.so: undefined reference tocv::imread(cv::String const&amp;, int)&apos;.build_release/lib/libcaffe.so: undefined reference tocv::imencode(cv::String const&amp;, cv::_InputArray const&amp;, std::vector &gt;&amp;, std::vector &gt; const&amp;)&apos;</span><br></pre></td></tr></table></figure>
+<p> 在 Makefile 文件中添加二三行的内容(原来是有的但是不全)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LIBRARIES += glog gflags protobuf leveldb snappy \  </span><br><span class="line">lmdb boost_system hdf5_hl hdf5 m \  </span><br><span class="line">opencv_core opencv_highgui opencv_imgproc opencv_imgcodecs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>make runtest时报错, 原因: caffe没有成功连接到Anaconda安装的libhdf5_hl.10.dylib<br><img src="/images/2017-10-09/5.png" alt="img5"></p>
+<p>每次重新 make all make test make runtest 都需要按照如下文章中的办法重新设置<br> <a href="http://blog.csdn.net/taigw/article/details/71057119">解决办法看此链接</a></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/caffe/" rel="tag"># caffe</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/05/20171005-parallel-share-file-with-mac/" rel="next" title="parallels 虚拟机 windows 共享 mac 文件">
+                <i class="fa fa-chevron-left"></i> parallels 虚拟机 windows 共享 mac 文件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/12/20171012-unzip-split-files/" rel="prev" title="解压\*.zip.001 类的压缩文件">
+                解压\*.zip.001 类的压缩文件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Xiaoshier">
+          <p class="site-author-name" itemprop="name">Xiaoshier</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#按照官网网上教程安装"><span class="nav-number">1.1.</span> <span class="nav-text">按照官网网上教程安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#error"><span class="nav-number">2.</span> <span class="nav-text">error</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiaoshier</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
