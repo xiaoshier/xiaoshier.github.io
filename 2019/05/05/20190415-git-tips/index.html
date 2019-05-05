@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="server,">
+  <meta name="keywords" content="git,">
 
 
 
@@ -87,20 +87,18 @@
 
 
 
-<meta name="description" content="新工作入职一个多月, 在这一个月内使用到了不少新技术, 现在总结一下使用 nginx 遇到的问题.先记录一下, 后期完善.">
-<meta name="keywords" content="server">
+<meta name="description" content="git 常用命令">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决Mac使用 nginx 启服务, 同一局域网下手机无法访问">
-<meta property="og:url" content="http://yoursite.com/2017/04/29/20170429-use-nginx/index.html">
+<meta property="og:title" content="git 常用命令">
+<meta property="og:url" content="http://yoursite.com/2019/05/05/20190415-git-tips/index.html">
 <meta property="og:site_name" content="Xiaoshier Blog">
-<meta property="og:description" content="新工作入职一个多月, 在这一个月内使用到了不少新技术, 现在总结一下使用 nginx 遇到的问题.先记录一下, 后期完善.">
+<meta property="og:description" content="git 常用命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/2017-04-29/imgSetting.png">
-<meta property="og:updated_time" content="2017-05-02T02:13:10.000Z">
+<meta property="og:updated_time" content="2019-05-05T08:56:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决Mac使用 nginx 启服务, 同一局域网下手机无法访问">
-<meta name="twitter:description" content="新工作入职一个多月, 在这一个月内使用到了不少新技术, 现在总结一下使用 nginx 遇到的问题.先记录一下, 后期完善.">
-<meta name="twitter:image" content="http://yoursite.com/images/2017-04-29/imgSetting.png">
+<meta name="twitter:title" content="git 常用命令">
+<meta name="twitter:description" content="git 常用命令">
 
 
 
@@ -128,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/29/20170429-use-nginx/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/05/20190415-git-tips/">
 
 
 
 
 
-  <title> 解决Mac使用 nginx 启服务, 同一局域网下手机无法访问 | Xiaoshier Blog </title>
+  <title> git 常用命令 | Xiaoshier Blog </title>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/29/20170429-use-nginx/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/20190415-git-tips/">
 
   <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Xiaoshier">
@@ -287,7 +285,7 @@
             
             
               
-                解决Mac使用 nginx 启服务, 同一局域网下手机无法访问
+                git 常用命令
               
             
           </h1>
@@ -302,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-29T14:36:22+08:00">
-                2017-04-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-05T16:56:40+08:00">
+                2019-05-05
               </time>
             
 
@@ -338,21 +336,13 @@
       
 
       
-        <p>新工作入职一个多月, 在这一个月内使用到了不少新技术, 现在总结一下使用 nginx 遇到的问题.<br>先记录一下, 后期完善.</p>
-<a id="more"></a>
-<p>nginx 已配置好, 电脑上也能正常访问. 手机输入链接地址, 却无法连接上.</p>
-<ol>
-<li><p>解决方案, 把 mac 防火墙关掉即可, 我目前是在设置里, 直接把防火墙关闭, 然后可以正常访问的.<br><img src="/images/2017-04-29/imgSetting.png" alt="imgSetting"></p>
-</li>
-<li><p>以下是命令行操作, 目前没有试验过, 因为还有很多东西不懂, 留在以后再进行修改</p>
-<ul>
-<li><a href="https://www.v2ex.com/t/219235">如何取消 OS X 防火墙对 Nginx 的 block ？</a></li>
-<li><a href="http://3.14159265.com/2016/01/19/mac-nginx-firewall-block/">解决 macOS 防火墙 Block Nginx</a></li>
-<li><a href="http://ju.outofmemory.cn/entry/154709">Mac下通过HomeBrew安装Nginx的坑</a></li>
-</ul>
-</li>
-</ol>
-
+        <p>git 常用命令<br><a id="more"></a></p>
+<p>## </p>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="string">'branchName'</span>    // 创建新分支, 并切换至该分支</span><br><span class="line">git branch <span class="string">'branchName'</span>         // 创建新分支</span><br><span class="line">git checkout <span class="string">'branchName'</span>       // 切换分支</span><br><span class="line">git merge <span class="string">'branchName'</span>          // 合并分支</span><br><span class="line">git branch -d <span class="string">'branchName'</span>      // 删除分支</span><br><span class="line">git branch -D <span class="string">'branchName'</span>      // 强制删除分支</span><br></pre></td></tr></table></figure>
+<h3 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git ls-remote                   // 查看远程分支</span><br><span class="line">git branch -a                   // 查看远程分支</span><br><span class="line">git branch <span class="string">'remote-branch'</span>      // 拉取切换分支即可</span><br><span class="line">git pull origin <span class="string">'localBranch'</span>:<span class="string">'remoteBranch'</span> // 拉取远程分支并本地分支关联</span><br><span class="line">git pull origin <span class="string">'branchName'</span>    // 远程分支与本地分支合并</span><br><span class="line">git push --<span class="built_in">set</span>-upstream origin <span class="string">'branchName'</span> // 远程创建并推送本地分支</span><br></pre></td></tr></table></figure>
+<h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span>                                               // commit comment</span><br><span class="line">&gt;  commitId, author, date, commit comment</span><br><span class="line"></span><br><span class="line">git <span class="built_in">log</span> -p -3                                         // file change details</span><br><span class="line">&gt;  显示提交 commit comment, 每个文件的修改详情</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git <span class="built_in">log</span> --<span class="built_in">stat</span>                                        // commitId, commit file list</span><br><span class="line">&gt; 显示提交 commit comment, 仅显示修改的文件列表</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git <span class="built_in">log</span> --pretty=oneline                              // commitId, commit comment</span><br><span class="line">&gt; commitId commit comment</span><br></pre></td></tr></table></figure>
+<h2 id="储藏"><a href="#储藏" class="headerlink" title="储藏"></a>储藏</h2><p>把暂时不想提交的改动保存到一个栈上<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git stash                       </span><br><span class="line">git stash save <span class="string">'stash-name'</span>     // 给当前存储命名</span><br><span class="line">git stash list                  // 显示 stash 列表</span><br><span class="line">git stash apply                 // 应用最新的储藏</span><br><span class="line">git stash apply stash@&#123;index&#125;   // 应用某一个储藏</span><br><span class="line">git stash drop                  // 扔掉 stash</span><br><span class="line">git stash drop stash@&#123;index&#125;    // 扔掉某一个储藏</span><br><span class="line">git stash branch <span class="string">'branName'</span>     // 从储藏创建一个分支</span><br></pre></td></tr></table></figure></p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2>
       
     </div>
 
@@ -375,7 +365,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/server/" rel="tag"># server</a>
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
       
@@ -388,8 +378,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/26/20170326-git-cooperation/" rel="next" title="工作中 git 的使用">
-                <i class="fa fa-chevron-left"></i> 工作中 git 的使用
+              <a href="/2018/12/06/20181206-node-version/" rel="next" title="node 版本控制记录">
+                <i class="fa fa-chevron-left"></i> node 版本控制记录
               </a>
             
           </div>
@@ -397,10 +387,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/14/20170514-summarize/" rel="prev" title="3-5月份工作小结">
-                3-5月份工作小结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -447,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Xiaoshier">
           <p class="site-author-name" itemprop="name">Xiaoshier</p>
@@ -504,6 +499,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分支"><span class="nav-number">1.</span> <span class="nav-text">分支</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建分支"><span class="nav-number">1.1.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程分支"><span class="nav-number">1.2.</span> <span class="nav-text">远程分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志"><span class="nav-number">2.</span> <span class="nav-text">日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#储藏"><span class="nav-number">3.</span> <span class="nav-text">储藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">4.</span> <span class="nav-text">注释</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
